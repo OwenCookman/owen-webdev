@@ -1,35 +1,26 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+Owen Cookman Web Developer
+======
 
-Welcome USER_NAME,
+The objective of this webpage is to advertise myself as a web developer, showcasing my portfolio of previous projects which should be regularly updated as more projects are finished, giving those who visit the website an introduction to myself, the work I have done, a way to contact me for consultations and also a way to hire and pay me as a freelance developer.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## UX
 
-## Gitpod Reminders
+The website is aimed at potential clients who would like to hire me as a developer.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Stories
 
-`python3 -m http.server`
+As a visitor I expect:
+1. To read about the developer and learn about their background
+2. To see the developers portfolio of work to understand what they are capable of
+3. To be able to contact the developer with any questions that I may have
+4. To be able to hire the developer and pay them for their service
+5. To navigate the website easily
+6. The information to be laid out in an easy to view format
 
-A blue button should appear to click: *Make Public*,
+### Styling Choices
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Wireframes
 
-A blue button should appear to click: *Make Public*,
+Please click [here]() to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
 
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
