@@ -19,45 +19,49 @@ def logout(request):
     return redirect(reverse('index'))
 
 
-def Login(request):
-    """Returns the login page, if user is logged in this returns index page"""
+def login(request):
+    """Return a login page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == "POST":
         login_form = UserLoginForm(request.POST)
+
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
+            messages.success(request, "You have successfully logged in!")
+
             if user:
                 auth.login(user=user, request=request)
-                messages.success(
-                    request, "You have been successfully logged in")
+                return redirect(reverse('index'))
+            else:
+                login_form.add_error(
+                    None, "Your username or password is incorrect")
     else:
-        login_form.add_error(
-            None, "Your Username and/or Password is incorrect")
-
-    return render(request, 'login.html', {"login_form": login_form})
+        login_form = UserLoginForm()
+    return render(request, 'login.html', {'login_form': login_form})
 
 
 def registration(request):
     """Returns the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
+
     if request.method == "POST":
         registration_form = UserRegistrationForm(request.POST)
+
         if registration_form.is_valid():
             registration_form.save()
+
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(
-                    request, "You have been registered successfully")
-                return redirect(reverse('index'))
+                messages.success(request, "You have successfully registered")
             else:
                 messages.error(
-                    request, "Sorry, unable to register your account at this time")
-        else:
-            registration_form = UserRegistrationForm()
-            return render(request, 'registration.html',
-                          {"registration_form": registration_form})
+                    request, "Unable to register your account at this time")
+    else:
+        registration_form = UserRegistrationForm()
+    return render(request, 'registration.html', {
+        "registration_form": registration_form})
