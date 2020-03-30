@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-	<title>Owen Cookman</title>
-</head>
+{% block page_title %}Home page{% endblock %}
 
-<body>
-	<h1>home</h1>
-	<nav>
-		<ul>
-			<li><a href="{% url 'login' %}">Login</a></li>
-			<li><a href="{% url 'logout' %}">Logout</a></li>
-			<li><a href="#">Register</a></li>
-			<li><a href="#">Profile</a></li>
-		</ul>
-	</nav>
-	<hr>
-	{% if messages %}
-	<div>
-		{% for message in messages %}
-		{{ message }}
-		{% enfor %}
-	</div>
-	{% endif %}
-</body>
-
-</html>
+{% block page_heading %}Home{% endblock %}
