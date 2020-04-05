@@ -46,5 +46,5 @@ As the Developer I expect:
 
 ### Wireframes
 
-Please click [here]() to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
+Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
 
