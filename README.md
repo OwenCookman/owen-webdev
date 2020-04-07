@@ -58,6 +58,11 @@ on a lot of other web pages, I noticed that this paired well with the Roboto fon
 would be styled with Inria Sans and any other blocks of text would use Roboto. This further breaks content up and keeps 
 the page looking interesting.
 
+#### Favicon
+The favicon was taken from [**PNG Fuel**](https://www.pngfuel.com/free-png/fdyur) I was looking for a simple icon that
+would explaine exactly what the website involves, the laptop with the </> symbol for code was perfect in showing that I 
+am a developer. 
+
 ### Wireframes 
 
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
