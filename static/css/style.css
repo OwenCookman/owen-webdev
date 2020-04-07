@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Inria+Sans&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -8,4 +12,13 @@ body {
 
 .title {
     font-family: 'Inria Sans', sans-serif;
+}
+
+.nav-bg {
+    background-color: rgba(52, 58, 64, 0.6)!important;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }

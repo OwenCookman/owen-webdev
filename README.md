@@ -90,5 +90,21 @@ customize it further such as the fonts used and the changes made to the navbar.
 ### Contact page
 
 ## Possible Features To Implement
-1. A more detailed contact form using check boxes that could give an estimated cost of the website build to the client
-2. A built in chat system allowing text communication to be handled completely on the website
+- A more detailed contact form using check boxes that could give an estimated cost of the website build to the client
+- A built in chat system allowing text communication to be handled completely on the website
+
+## Technologies Used
+
+- This project uses **HTML**, **CSS**, **JavaScript** and **Python** programming languages
+- [**GitPod**](https://www.gitpod.io/) was used as the development IDE
+- [**Bootstrap**](https://getbootstrap.com/)
+- [**FontAwesome**](https://fontawesome.com/)
+- [**Google Fonts**](https://fonts.google.com/)
+- [**Popper.js**](https://popper.js.org/)
+- this projects wireframes were created on [**Balsamiq**](https://balsamiq.com/)
+- The CSS code was validated using the [**W3C Markup Validation Service**](https://validator.w3.org/) website
+- The build was tested with [**Travis Continuous Integretion**](https://travis-ci.org/)
+
+## Testing
+
+To view the testing carried out on this project please click [here](TESTING.md) for my separate testing file
