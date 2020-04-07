@@ -89,3 +89,6 @@ customize it further such as the fonts used and the changes made to the navbar.
 
 ### Contact page
 
+## Possible Features To Implement
+1. A more detailed contact form using check boxes that could give an estimated cost of the website build to the client
+2. A built in chat system allowing text communication to be handled completely on the website
