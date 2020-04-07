@@ -52,7 +52,13 @@ screens. I also decided that each section of content would have a navy blue back
 left white, this would allow the text to be left a white colour so that it still stood out on the page but also broke 
 any long pages in to sections rather than being one long list of content.
 
+#### Fonts
+I decided to go with the Inria Sans font as it still looked professional and neat but also different from what is seen
+on a lot of other web pages, I noticed that this paired well with the Roboto font so I decided that any titles or headers
+would be styled with Inria Sans and any other blocks of text would use Roboto. This further breaks content up and keeps 
+the page looking interesting.
 
 ### Wireframes 
 
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
+
