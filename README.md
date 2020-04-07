@@ -62,3 +62,30 @@ the page looking interesting.
 
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
 
+## Features
+
+### Theme
+
+The original Theme was taken from the Bootswatch themes library, the theme Sandstone was used and then styled with CSS to 
+customize it further such as the fonts used and the changes made to the navbar.
+
+### navbar
+
+### Index Page/Introduction
+
+### User Register
+
+### User Login
+
+### User Logout
+
+### User Profile
+
+### About Me page
+
+### What I Do page
+
+### Portfolio
+
+### Contact page
+
