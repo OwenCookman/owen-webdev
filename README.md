@@ -44,9 +44,15 @@ As the Developer I expect:
 
 ### Styling Choices
 
+#### Colours
+I wanted to aim for a neutral colour palette with this website as my clients could be looking to build websites with 
+a whole range of themes. This led me to look at neutral colour groups and I settled on a Charcoal/opaque navbar, this 
+would seperate the navbar from other sections of the page but allow it to be fixed and not obstruct too much on smaller
+screens. I also decided that each section of content would have a navy blue background while the blank areas would be 
+left white, this would allow the text to be left a white colour so that it still stood out on the page but also broke 
+any long pages in to sections rather than being one long list of content.
+
 
 ### Wireframes 
 
-
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
-
