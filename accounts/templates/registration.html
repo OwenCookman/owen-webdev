@@ -1,4 +1,5 @@
 {% extends 'layout/base.html' %}
+{% load bootstrap_tags %}
 
 {% block page_title %}Registration page{% endblock %}
 
@@ -9,7 +10,7 @@
 
 <form method="POST">
     {% csrf_token %}
-    {{ registration_form }}
+    {{ registration_form | as_bootstrap }}
     <button type="submit">Register</button>
 </form>
 {% endblock %}
