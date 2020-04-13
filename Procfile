@@ -1,1 +1,1 @@
-web: gunicorn owen-webdev.wsgi:application
+web: gunicorn webdev.wsgi:application
