@@ -18,9 +18,12 @@ from django.urls import path, include
 from accounts.views import index
 from accounts import urls as accounts_urls
 from comms import urls as comms_urls
+from portfolio import urls as portfolio_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('accounts/', include(accounts_urls)),
+    path('comms/', include(comms_urls)),
+    path('portfolio/', include(portfolio_urls)),
 ]
