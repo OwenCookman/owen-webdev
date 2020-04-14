@@ -22,3 +22,8 @@ body {
     margin-left: 0;
     margin-right: 0;
 }
+
+.intro-icon {
+    display: block;
+    font-size: 6rem;
+}
