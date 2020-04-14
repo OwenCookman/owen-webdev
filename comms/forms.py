@@ -1,7 +1,7 @@
 from django import forms
 
 
-class ContactForm(forms.form):
+class ContactForm(forms.Form):
     """The form users use to give information on the website
     they would like to have built"""
     Question1 = forms.BooleanField(
