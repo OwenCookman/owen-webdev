@@ -6,6 +6,8 @@
 {% block page_heading %}Login{% endblock %}
 
 {% block content %}
+<p>If you need to make an account please <a href="{% url 'registration' %}">Register</a> here</p>
+
 <form method="POST">
 	{% csrf_token %}
 	{{ login_form | as_bootstrap }}
