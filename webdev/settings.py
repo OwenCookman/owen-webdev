@@ -150,5 +150,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+# Stripe payments
+
+STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLISHABLE")
+STRIPE_SECRET = os.environ.get("STRIPE_SECRET")
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
