@@ -10,6 +10,10 @@ body {
     text-align: center;
 }
 
+footer {
+    background-color: rgba(52, 58, 64);
+}
+
 .title {
     font-family: 'Inria Sans', sans-serif;
 }
