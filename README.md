@@ -2,7 +2,10 @@ Owen Cookman Web Developer
 ======
 [![Build Status](https://travis-ci.com/OwenCookman/owen-webdev.svg?branch=master)](https://travis-ci.com/OwenCookman/owen-webdev)
 
-The objective of this webpage is to advertise myself as a web developer, showcasing my portfolio of previous projects which should be regularly updated as more projects are finished, giving those who visit the website an introduction to myself, the work I have done, a way to contact me for consultations and also a way to hire and pay me as a freelance developer.
+The objective of this webpage is to advertise myself as a web developer, showcasing my portfolio of previous projects 
+which should be regularly updated as more projects are finished, giving those who visit the website an introduction to 
+myself, the work I have done, a way to contact me for consultations and also a way to hire and pay me as a freelance 
+developer.
 
 ## UX
 
@@ -66,6 +69,10 @@ am a developer.
 ### Wireframes 
 
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
+
+#### Changes
+The 'About Me' page and 'What I do' page were later combined on to the index page as this would be the landing point where
+this information could be displayed to sell myself as a developer rather than having two small seperate pages.
 
 ## Features
 
