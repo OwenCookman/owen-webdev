@@ -4,5 +4,6 @@ from comms.forms import ContactForm
 
 # Create your views here.
 
+@login_required
 def contact(request):
     return render(request, 'contact.html')
