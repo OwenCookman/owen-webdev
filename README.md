@@ -108,7 +108,7 @@ customize it further such as the fonts used and the changes made to the navbar.
 - [**Popper.js**](https://popper.js.org/)
 - this projects wireframes were created on [**Balsamiq**](https://balsamiq.com/)
 - The CSS code was validated using the [**W3C Markup Validation Service**](https://validator.w3.org/) website
-- The build was tested with [**Travis Continuous Integretion**](https://travis-ci.org/)
+- The build was tested with [**Travis Continuous Integration**](https://travis-ci.org/)
 
 ## Testing
 
