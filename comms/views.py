@@ -4,6 +4,11 @@ from comms.forms import ContactForm
 
 # Create your views here.
 
+
 @login_required
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == "POST":
+        contact_form = ContactForm(request.POST)
+    else:
+        contact_form = ContactForm()
+    return render(request, 'contact.html', {'contact_form': contact_form})
