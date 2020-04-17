@@ -12,6 +12,10 @@ body {
     background-color: #fafafa;
 }
 
+footer {
+    background-color: #343a40;
+}
+
 .footer-note {
     font-size: 0.5rem;
     color: #fafafa;
