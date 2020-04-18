@@ -12,4 +12,4 @@ class query(models.Model):
     customer = models.CharField(max_length=200)
     message = models.CharField(max_length=200)
 
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
