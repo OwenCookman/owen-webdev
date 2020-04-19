@@ -11,5 +11,3 @@ class query(models.Model):
     business = models.CharField(max_length=200)
     customer = models.CharField(max_length=200)
     message = models.CharField(max_length=200)
-
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
