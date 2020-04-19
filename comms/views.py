@@ -14,12 +14,13 @@ def contact(request):
         if contact_form.is_valid():
             contact_form.save()
 
-            query = auth.authenticate(website=request.POST['website'],
-                                      functionality=request.POST['functionality'],
-                                      url=request.POST['url'],
-                                      business=request.POST['business'],
-                                      customer=request.POST['customer'],
-                                      message=request.POST['message'])
+            form = contact_form()
+            form.cleaned_data(website=request.POST['website'])
+            form.cleaned_data(functionality=request.POST['functionality'])
+            form.cleaned_data(url=request.POST['url'])
+            form.cleaned_data(business=request.POST['business'])
+            form.cleaned_data(customer=request.POST['customer'])
+            form.cleaned_data(message=request.POST['message'])
         else:
             messages.error(
                 request, "Sorry, your request could not be submitted, please try again")
