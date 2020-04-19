@@ -8,8 +8,8 @@
 {% block content %}
 
 <form method="POST">
-
+{% csrf_token %}
 {{ contact_form | as_bootstrap }}
-
+<button type="submit">Send</button>
 </form>
 {% endblock %}
