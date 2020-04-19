@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
-class query(models.Model):
+class order(models.Model):
     website = models.CharField(max_length=200)
     functionality = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
