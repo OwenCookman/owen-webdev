@@ -30,4 +30,3 @@ class order(models.Model):
     message = models.CharField(
         "Please provide any extra information that you think might be useful", max_length=200)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
