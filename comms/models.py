@@ -18,6 +18,7 @@ class order(models.Model):
         ('User Registration & Login', 'User Registration & Login'),
         ('Something Else', 'Something Else')
     )
+    name = models.CharField("What is the name of your business?", max_length=50)
     website = models.CharField(
         "What kind of website would you like?", max_length=50, choices=WEBSITE_CHOICES)
     functionality = models.CharField(
