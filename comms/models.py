@@ -24,7 +24,7 @@ class order(models.Model):
     website = models.CharField(
         "What kind of website would you like?", max_length=50, choices=WEBSITE_CHOICES)
     functionality = models.CharField(
-        "What functionality would you like your website to have?", max_length=200)
+        "What would you like users to do on your website?", max_length=200)
     url = models.CharField(
         "If you already have a website please add the URL here", max_length=200)
     business_type = models.CharField(
