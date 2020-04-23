@@ -9,11 +9,11 @@ class ContactForm(forms.ModelForm):
             'business_name', 'website',
             'functionality', 'url',
             'business_type', 'customer',
-            'message'
+            'message',
         ]
         widgets = {
             'website': forms.RadioSelect(),
-            'functionality': forms.CheckboxSelectMultiple(),
+            'functionality': forms.Textarea(),
             'business_type': forms.Textarea(),
             'customer': forms.Textarea(),
             'message': forms.Textarea(),
