@@ -34,6 +34,7 @@ class order(models.Model):
     message = models.CharField(
         "Please provide any extra information that you think might be useful", max_length=200)
     client = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, default=1)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.business_name
