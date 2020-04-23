@@ -13,12 +13,6 @@ class order(models.Model):
         ('Ecommerce/Webstore', 'Ecommerce/Webstore'),
         ('Something Else', 'Something Else')
     )
-    # FUNCTIONALITY_CHOICES = (
-    #     ('Online Payments', 'Online Payments'),
-    #     ('Shopping Cart/Checkout', 'Shopping Cart/Checkout'),
-    #     ('User Registration & Login', 'User Registration & Login'),
-    #     ('Something Else', 'Something Else')
-    # )
     business_name = models.CharField(
         "What is the name of your business?", max_length=50)
     website = models.CharField(
