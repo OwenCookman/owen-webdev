@@ -45,3 +45,7 @@ footer {
     display: block;
     font-size: 6rem;
 }
+
+#id_website_1 {
+    display: none;
+}
