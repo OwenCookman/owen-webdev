@@ -6,7 +6,10 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = models.order
         fields = [
-            'business_name', 'website', 'functionality', 'url', 'business_type', 'customer', 'message'
+            'business_name', 'website',
+            'functionality', 'url',
+            'business_type', 'customer',
+            'message'
         ]
         widgets = {
             'website': forms.RadioSelect(),
