@@ -73,6 +73,7 @@ def registration(request):
 def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)
-    orders = order.objects.get(client=request.user.username)
+    print(request.user)
+    # orders = order.objects.get(client=request.user.id)
     # context = {{"profile": user}, {'orders': orders}}
-    return render(request, 'profile.html', {"profile": user}, {'orders': orders})
+    return render(request, 'profile.html', {"profile": user, 'orders': orders})
