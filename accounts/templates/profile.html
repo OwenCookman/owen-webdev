@@ -6,4 +6,17 @@
 
 {% block content %}
 <p>{{ profile.email }}</p>
+{% for order in orders %}
+
+<p>{{ order.business_name }}</p>
+<p>{{ order.website }}</p>
+<p>{{ order.functionality }}</p>
+<p>{{ order.url }}</p>
+<p>{{ order.business_type }}</p>
+<p>{{ order.customer }}</p>
+<p>{{ order.message }}</p>
+<p>{{ order.client }}</p>
+<p>{{ order.date }}</p>
+
+{% endfor %}
 {% endblock %}
