@@ -7,16 +7,46 @@
 {% block content %}
 <p>{{ profile.email }}</p>
 {% for order in orders %}
-
-<p>{{ order.business_name }}</p>
-<p>{{ order.website }}</p>
-<p>{{ order.functionality }}</p>
-<p>{{ order.url }}</p>
-<p>{{ order.business_type }}</p>
-<p>{{ order.customer }}</p>
-<p>{{ order.message }}</p>
-<p>{{ order.client }}</p>
-<p>{{ order.date }}</p>
+<div class="row">
+	<div class="col-2">
+		<p>Business Name</p>
+	</div>
+	<div class="col-2">
+		<p>Website Type</p>
+	</div>
+	<div class="col-2">
+		<p>Functionality</p>
+	</div>
+	<div class="col-2">
+		<p>Business Type</p>
+	</div>
+	<div class="col-2">
+		<p>Customers</p>
+	</div>
+	<div class="col-2">
+		<p>Date Requested</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-2">
+		<p>{{ order.business_name }}</p>
+	</div>
+	<div class="col-2">
+		<p>{{ order.website }}</p>
+	</div>
+	<div class="col-2">
+		<p>{{ order.functionality }}</p>
+	</div>
+	<div class="col-2">
+		<p>{{ order.business_type }}</p>
+	</div>
+	<div class="col-2">
+		<p>{{ order.customer }}</p>
+	</div>
+	<div class="col-2">
+		<p>{{ order.date }}</p>
+	</div>
+</div>
 
 {% endfor %}
 {% endblock %}
