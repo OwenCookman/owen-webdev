@@ -71,9 +71,8 @@ def registration(request):
 
 @login_required
 def user_profile(request):
-    """The user's profile page"""
+    """The user's profile page where the user's orders are displayed"""
     user = User.objects.get(email=request.user.email)
-    print(request.user)
-    # orders = order.objects.get(client=request.user.id)
-    # context = {{"profile": user}, {'orders': orders}}
-    return render(request, 'profile.html', {"profile": user, 'orders': orders})
+    orders = order.objects.filter(client=request.user.id)
+    context = {"profile": user, 'orders': orders}
+    return render(request, 'profile.html', context)
