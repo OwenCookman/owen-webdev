@@ -47,7 +47,7 @@
 		<p>{{ order.date }}</p>
 	</div>
 </div>
-{% if pay_deposit == true %}
+{% if order.pay_deposit is True %}
 <div class="row">
 	<div class="col">
 		<p>Please pay the deposit</p>
@@ -56,8 +56,10 @@
 		</form>
 	</div>
 </div>
+{% else %}
+<p>Awaiting confirmation</p>
 {% endif %}
-{% if pay_final == true %}
+{% if order.pay_final is True %}
 <div class="row">
 	<div class="col">
 		<p>Please pay your final payment</p>
@@ -66,6 +68,8 @@
 		</form>
 	</div>
 </div>
+{% else %}
+<p>Awaiting completion</p>
 {% endif %}
 {% endfor %}
 {% endblock %}
