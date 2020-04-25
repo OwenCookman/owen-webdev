@@ -19,6 +19,7 @@ from accounts.views import index
 from accounts import urls as accounts_urls
 from comms import urls as comms_urls
 from portfolio import urls as portfolio_urls
+from payments import urls as payments_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('accounts/', include(accounts_urls)),
     path('comms/', include(comms_urls)),
     path('portfolio/', include(portfolio_urls)),
+    path('payments/', include(payments_urls)),
 ]
