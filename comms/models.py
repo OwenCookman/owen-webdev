@@ -29,6 +29,9 @@ class order(models.Model):
         "Please provide any extra information that you think might be useful", max_length=200)
     client = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, default=1)
     date = models.DateTimeField(auto_now_add=True)
+    price = models.FloatField(default=0)
+    pay_deposit = models.BooleanField(default=False)
+    pay_final = models.BooleanField(default=False)
 
     def __str__(self):
         return self.business_name
