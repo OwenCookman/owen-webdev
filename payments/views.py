@@ -39,4 +39,4 @@ def payment(request):
             messages.errors(request, "Unable to take a payment with that card")
     else:
         payment_form = MakePayment()
-        return render(request, "payment.html", {"this_order": this_order, "payment_form": payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+        return render(request, "payment.html", {"payment_form": payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
