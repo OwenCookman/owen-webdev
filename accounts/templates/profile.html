@@ -57,6 +57,15 @@
 	</div>
 </div>
 {% endif %}
-
+{% if pay_final == true %}
+<div class="row">
+	<div class="col">
+		<p>Please pay your final payment</p>
+		<form action="{% url 'payment' %}">
+			<input type="submit" value="Make Payment">
+		</form>
+	</div>
+</div>
+{% endif %}
 {% endfor %}
 {% endblock %}
