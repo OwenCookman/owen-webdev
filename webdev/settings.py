@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'storages',
     'accounts',
     'comms',
+    'payments',
     'portfolio',
 ]
 
