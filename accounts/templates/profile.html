@@ -8,73 +8,61 @@
 <p>{{ profile.email }}</p>
 {% for order in orders %}
 <div class="row">
-	<div class="col-2">
+	<div class="col-3">
 		<p>Business Name</p>
 	</div>
-	<div class="col-2">
+	<div class="col-3">
 		<p>Website Type</p>
 	</div>
-	<div class="col-2">
-		<p>Functionality</p>
+	<div class="col-3">
+		<p>Status</p>
 	</div>
-	<div class="col-2">
-		<p>Business Type</p>
-	</div>
-	<div class="col-2">
-		<p>Customers</p>
-	</div>
-	<div class="col-2">
-		<p>Date Requested</p>
+	<div class="col-3">
+		<p>Date requested</p>
 	</div>
 </div>
 <div class="row">
-	<div class="col-2">
+	<div class="col-3">
 		<p>{{ order.business_name }}</p>
 	</div>
-	<div class="col-2">
+	<div class="col-3">
 		<p>{{ order.website }}</p>
 	</div>
-	<div class="col-2">
-		<p>{{ order.functionality }}</p>
+	<div class="col-3">
+		{% if order.pay_deposit is False %}
+		<p>Awaiting confirmation</p>
+		{% elif order.pay_deposit is True and order.deposit_paid is False %}
+		<div class="row">
+			<div class="col">
+				<p>Please pay the deposit</p>
+				<form action="{% url 'payment' %}">
+					<input type="submit" value="Make Payment">
+		</form>
+			</div>
+		</div>
+		{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
+		<div class="row">
+			<div class="col">
+				<p>Deposit paid, awaiting completion</p>
+			</div>
+		</div>
+		{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
+		<div class="row">
+			<div class="col">
+				<p>Please pay your final payment</p>
+				<form action="{% url 'payment' %}">
+					<input type="submit" value="Make Payment">
+		</form>
+			</div>
+		</div>
+		{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
+		<p>Final payment made</p>
+		{% endif %}
 	</div>
-	<div class="col-2">
-		<p>{{ order.business_type }}</p>
-	</div>
-	<div class="col-2">
-		<p>{{ order.customer }}</p>
-	</div>
-	<div class="col-2">
+    <div class="col-3">
 		<p>{{ order.date }}</p>
 	</div>
 </div>
-{% if order.pay_deposit is False %}
-<p>Awaiting confirmation</p>
-{% elif order.pay_deposit is True and order.deposit_paid is False %}
-<div class="row">
-	<div class="col">
-		<p>Please pay the deposit</p>
-		<form action="{% url 'payment' %}">
-			<input type="submit" value="Make Payment">
-		</form>
-	</div>
-</div>
-{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
-<div class="row">
-	<div class="col">
-		<p>Deposit paid, awaiting completion</p>
-	</div>
-</div>
-{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
-<div class="row">
-	<div class="col">
-		<p>Please pay your final payment</p>
-		<form action="{% url 'payment' %}">
-			<input type="submit" value="Make Payment">
-		</form>
-	</div>
-</div>
-{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
-<p>Final payment made</p>
-{% endif %}
-{% endfor %}
-{% endblock %}
+
+	{% endfor %}
+	{% endblock %}
