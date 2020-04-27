@@ -31,7 +31,9 @@ class order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     price = models.FloatField(default=0)
     pay_deposit = models.BooleanField(default=False)
+    deposit_paid = models.BooleanField(default=False)
     pay_final = models.BooleanField(default=False)
+    final_paid = models.BooleanField(default=False)
 
     def __str__(self):
         return self.business_name
