@@ -1,5 +1,6 @@
 {% extends 'layout/base.html' %}
 {% load bootstrap_tags %}
+{% load static %}
 
 {% block head_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -13,9 +14,9 @@
 
 {% block content %}
 
-<p>Your total for this payment is £{{ this_order.price / 2 }}</p>
+<p>Your total for this payment is £{{ this_order.price }}</p>
 
-<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+<form role="form" method="post" id="payment-form">
     <legend>Payment Details</legend>
 
     <div id="credit-card-errors" style="display: none;">
