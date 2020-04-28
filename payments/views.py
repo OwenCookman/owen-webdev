@@ -14,10 +14,10 @@ stripe.api_key = settings.STRIPE_SECRET
 def payment(request):
     if request.method == "POST":
         payment_form = MakePayment(request.POST)
+        this_order = order(request.POST)
 
         if payment_form.is_valid:
-            this_order = order.object.get(request.order.id)
-            total = this_order.price / 2
+            total = this_order.price
 
             try:
                 customer = stripe.Charge.create(
