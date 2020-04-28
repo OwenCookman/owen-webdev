@@ -23,6 +23,10 @@ footer {
     text-transform: uppercase;
 }
 
+img {
+    max-width: 400px;
+}
+
 .footer-note {
     font-size: 0.5rem;
     color: #fafafa;
