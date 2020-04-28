@@ -74,5 +74,5 @@ def user_profile(request):
     """The user's profile page where the user's orders are displayed"""
     user = User.objects.get(email=request.user.email)
     orders = order.objects.filter(client=request.user.id)
-    context = {"profile": user, 'orders': orders}
+    context = {'profile': user, 'orders': orders}
     return render(request, 'profile.html', context)
