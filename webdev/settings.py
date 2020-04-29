@@ -165,3 +165,12 @@ STRIPE_SECRET = os.environ.get("STRIPE_SECRET")
 # Page messages
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+# Send Emails
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'MY_EMAIL'
+EMAIL_HOST_PASSWORD = 'MY_EMAIL_PASSWORD'
+EMAIL_PORT = 587
