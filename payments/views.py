@@ -16,7 +16,7 @@ def payment(request):
         payment_form = MakePayment(request.POST)
         this_order = order(request.POST)
 
-        if payment_form.is_valid:
+        if payment_form.is_valid():
             total = this_order.price
 
             try:
@@ -36,7 +36,7 @@ def payment(request):
                 messages.error(request, "Unable to take payment")
         else:
             print(payment_form.errors)
-            messages.errors(request, "Unable to take a payment with that card")
+            messages.error(request, "Unable to take a payment with that card")
     else:
         payment_form = MakePayment()
-        return render(request, "payment.html", {"payment_form": payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+    return render(request, "payment.html", {"payment_form": payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
