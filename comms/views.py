@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
+from django.core.mail import EmailMessage
 from django.contrib import messages
 from . import forms
+import os
 
 # Create your views here.
 
+MY_EMAIL = os.environ.get('MY_EMAIL')
 
 @login_required
 def contact(request):
@@ -16,7 +19,14 @@ def contact(request):
             contact.client = request.user
             contact.save()
             messages.success(request, "Your form submitted successfully")
-            return redirect('index')
+            message = contact_form.cleaned_data['message']
+            subject = "order"
+            from_email = request.user.email
+
+            email = EmailMessage(subject, message, from_email, to=['MY_EMAIL'])
+            email.send()
+
+            return redirect('profile')
 
         else:
             messages.error(
