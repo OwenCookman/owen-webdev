@@ -19,7 +19,7 @@ class order(models.Model):
     functionality = models.CharField(
         "What would you like users to do on your website?", max_length=1000)
     url = models.CharField(
-        "If you already have a website please add the URL here", max_length=200)
+        "If you already have a website please add the URL here", max_length=200, null=True, blank=True)
     business_type = models.CharField(
         "What does your business do?", max_length=2000)
     customer = models.CharField(
@@ -36,3 +36,13 @@ class order(models.Model):
 
     def __str__(self):
         return self.business_name
+
+
+class question(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    question = models.CharField(max_length=3000)
+    Answer = models.Charfield(max_length=3000)
+
+    def __str__(self):
+        return self.name
