@@ -12,6 +12,7 @@
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
 
+{% block page_title %}Make a Payment{% endblock %}
 {% block content %}
 
 <p>Your total for this payment is £{{ this_order.price }}</p>
