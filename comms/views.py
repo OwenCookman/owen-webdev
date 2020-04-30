@@ -19,12 +19,12 @@ def contact(request):
             contact.client = request.user
             contact.save()
             messages.success(request, "Your form submitted successfully")
-            message = contact_form.cleaned_data['message']
-            subject = "order"
-            from_email = request.user.email
+            #message = contact_form.cleaned_data['message']
+            #subject = "order"
+            #from_email = request.user.email
 
-            email = EmailMessage(subject, message, from_email, to=['MY_EMAIL'])
-            email.send()
+            #email = EmailMessage(subject, message, from_email, to=['MY_EMAIL'])
+            #email.send()
 
             return redirect('profile')
 
@@ -33,6 +33,5 @@ def contact(request):
                 request, "Sorry, your request could not be submitted, please try again")
 
     else:
-        print("failed")
         contact_form = forms.ContactForm()
     return render(request, 'contact.html', {'contact_form': contact_form})
