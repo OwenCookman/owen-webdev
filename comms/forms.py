@@ -18,3 +18,15 @@ class ContactForm(forms.ModelForm):
             'customer': forms.Textarea(),
             'message': forms.Textarea(),
         }
+
+
+class QuestionForm(forms.ModelForm):
+    class Meta:
+        model = models.question
+        fields = [
+            'name', 'email',
+            'question',
+        ]
+        widgets = {
+            'question': forms.Textarea(),
+        }
