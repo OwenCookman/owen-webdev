@@ -15,7 +15,7 @@
 {% block page_title %}Make a Payment{% endblock %}
 {% block content %}
 
-<p>Your total for this payment is £{{ this_order.price }}</p>
+<p>Your total for this payment is £{{ order.price }}</p>
 
 <form role="form" method="post" id="payment-form">
     <legend>Payment Details</legend>

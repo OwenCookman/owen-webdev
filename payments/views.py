@@ -14,10 +14,11 @@ stripe.api_key = settings.STRIPE_SECRET
 def payment(request):
     if request.method == "POST":
         payment_form = MakePayment(request.POST)
-        this_order = order(request.POST)
+        print(payment_form)
 
         if payment_form.is_valid():
-            total = this_order.price
+            total = payment_form.price
+            print(total)
 
             try:
                 customer = stripe.Charge.create(
@@ -35,7 +36,6 @@ def payment(request):
             else:
                 messages.error(request, "Unable to take payment")
         else:
-            print(payment_form.errors)
             messages.error(request, "Unable to take a payment with that card")
     else:
         payment_form = MakePayment()
