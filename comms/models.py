@@ -42,7 +42,7 @@ class question(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     question = models.CharField(max_length=3000)
-    Answer = models.Charfield(max_length=3000)
+    Answer = models.CharField(max_length=3000)
 
     def __str__(self):
         return self.name
