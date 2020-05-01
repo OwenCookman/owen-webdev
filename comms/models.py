@@ -43,6 +43,7 @@ class question(models.Model):
     email = models.EmailField(max_length=50)
     question = models.CharField(max_length=3000)
     Answer = models.CharField(max_length=3000)
+    client = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
