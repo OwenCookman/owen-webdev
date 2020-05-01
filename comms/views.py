@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage
 from django.contrib import messages
+from .models import question
 from . import forms
 import os
 
@@ -10,7 +11,7 @@ import os
 MY_EMAIL = os.environ.get('MY_EMAIL')
 
 
-def question(request):
+def query(request):
     if request.method == "POST":
         question_form = forms.QuestionForm(request.POST)
 
@@ -33,15 +34,23 @@ def question(request):
     return render(request, 'question.html', {"question_form": question_form})
 
 
-def EditQuestion(request, slug):
-    data = question.objects.get(id=slug)
-    question_form = forms.QuestionForm(instance=data)
+def edit_question(request, slug):
+    form_data = question.objects.get(id=slug)
+    question_form = forms.QuestionForm(instance=form_data)
 
     if request.method == "POST":
-        question_form = forms.QuestionForm(request.POST, instance=data)
+        question_form = forms.QuestionForm(request.POST, instance=form_data)
 
         if question_form.is_valid():
             question_form.save()
+            messages.success(request, "Question edited successfully")
+            return redirect('profile')
+
+        else:
+            question_form = forms.QuestionForm(instance=form_data)
+
+    else:
+        messages.warning(request, "Sorry that could not be submitted")
 
     return render(request, 'question.html', {"question_form": question_form})
 
