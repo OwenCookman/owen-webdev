@@ -9,6 +9,24 @@ import os
 
 MY_EMAIL = os.environ.get('MY_EMAIL')
 
+
+def question(request):
+    if request.method == "POST":
+        question_form = forms.QuestionForm(request.POST)
+
+        if question_form.is_valid():
+            question_form.save()
+            messages.success(request, "Thank you for your message, I will get back to you shortly")
+            return redirect('index')
+
+        else:
+            messages.warning(request, "Sorry your message could not be posted, please try again")
+
+    else:
+        question_form = forms.QuestionForm()
+    return render(request, question.html, {"question_form": question_form})
+
+
 @login_required
 def contact(request):
     if request.method == "POST":
