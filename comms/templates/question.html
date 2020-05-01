@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+{% load bootstrap_tags %}
+
+{% block page_title %}Send a Message{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<form action="{% url 'question' %}" method="POST">
+{% csrf_token %}
+{{ question_form | as_bootstrap }}
+<button type="submit">Send</button>
+</form>
+{% endblock %}
