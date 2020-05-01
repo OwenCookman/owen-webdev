@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block page_title %}Summary{% endblock %}
+{% block content %}
+
+<div class="row">
+	<div class="col">
+		<p>Below is a summary of your order</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-3">
+		<p>Business Name</p>
+	</div>
+	<div class="col-3">
+		<p>website type</p>
+	</div>
+	<div class="col-3">
+		<p>Total cost</p>
+	</div>
+    <div class="col-3">
+		<p>Total to pay</p>
+	</div>
+	<div class="col-3">
+		<p>Date requested</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-3">
+		<p>{{ this_order.business_name }}</p>
+	</div>
+	<div class="col-3">
+		<p>{{ this_order.website }}</p>
+	</div>
+	<div class="col-3">
+		<p>£{{ this_order.price|floatformat:2 }}</p>
+	</div>
+    <div class="col-3">
+        <p>{{ to_pay|floatformat:2 }}</p>
+    </div>
+	<div class="col-3">
+		<p>{{ this_order.date }}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<a id="PrintPage" href="#">Print</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<a href="{% url 'payment' slug=this_order.id %}">
+        <button>Make Payment</button>
+        </a>
+	</div>
+</div>
+{% endblock %}
