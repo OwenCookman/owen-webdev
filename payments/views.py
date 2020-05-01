@@ -11,18 +11,27 @@ stripe.api_key = settings.STRIPE_SECRET
 
 
 @login_required()
-def payment(request):
+def summary(request, slug):
+    this_order = order.objects.get(id=slug)
+    to_pay = this_order.price / 2
+    context = {'this_order': this_order, "to_pay": to_pay}
+    return render(request, "summary.html", context)
+
+
+@login_required()
+def payment(request, slug):
+    this_order = order.objects.get(id=slug)
+    to_pay = this_order.price / 2
+
     if request.method == "POST":
         payment_form = MakePayment(request.POST)
         print(payment_form)
 
         if payment_form.is_valid():
-            total = payment_form.price
-            print(total)
 
             try:
                 customer = stripe.Charge.create(
-                    amount=int(total * 100),
+                    amount=int(to_pay * 100),
                     currency="GBP",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id'],
@@ -39,4 +48,9 @@ def payment(request):
             messages.error(request, "Unable to take a payment with that card")
     else:
         payment_form = MakePayment()
-    return render(request, "payment.html", {"payment_form": payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+
+    context = {'payment_form': payment_form,
+               'publishable': settings.STRIPE_PUBLISHABLE,
+               'this_order': this_order,
+               'to_pay': to_pay}
+    return render(request, "payment.html", context)
