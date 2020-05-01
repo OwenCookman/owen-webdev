@@ -36,7 +36,7 @@
 			<div class="row">
 				<div class="col">
 					<p>Please pay the deposit</p>
-					<form action="{% url 'payment' %}">
+					<form action="{% url 'summary' slug=order.id %}">
 						<input type="submit" value="Make Payment">
 		</form>
 				</div>
@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="col">
 					<p>Please pay your final payment</p>
-					<form action="{% url 'payment' %}">
+					<form action="{% url 'summary' slug=order.id %}">
 						<input type="submit" value="Make Payment">
 		</form>
 				</div>
