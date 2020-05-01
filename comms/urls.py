@@ -1,8 +1,8 @@
 from django.urls import path
-from comms.views import contact, question, EditQuestion
+from .views import contact, query, edit_question
 
 urlpatterns = [
     path('contact/', contact, name="contact"),
-    path('question/', question, name="question"),
-    path('question/<slug>', EditQuestion, name="edit_question"),
+    path('query/', query, name="question"),
+    path('edit_question/<slug>', edit_question, name="edit_question"),
 ]
