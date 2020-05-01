@@ -14,6 +14,7 @@ body {
 
 footer {
     background-color: #343a40;
+    color: #fafafa;
 }
 
 .sandstone, .navbar .nav-link, .btn, .nav-tabs .nav-link, .nav-pills .nav-link, .breadcrumb, .pagination, .dropdown-menu .dropdown-item, .tooltip {
@@ -29,7 +30,6 @@ img {
 
 .footer-note {
     font-size: 0.5rem;
-    color: #fafafa;
 }
 
 .title {
