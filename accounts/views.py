@@ -3,7 +3,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
-from comms.models import order
+from comms.models import order, question
 
 # Create your views here.
 
@@ -60,6 +60,7 @@ def registration(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, "You have successfully registered")
+                return redirect(reverse('index'))
             else:
                 messages.error(
                     request, "Unable to register your account at this time")
@@ -74,5 +75,6 @@ def user_profile(request):
     """The user's profile page where the user's orders are displayed"""
     user = User.objects.get(email=request.user.email)
     orders = order.objects.filter(client=request.user.id)
-    context = {'profile': user, 'orders': orders}
+    questions = question.objects.filter(client=request.user.id)
+    context = {'profile': user, 'orders': orders, 'questions': questions}
     return render(request, 'profile.html', context)
