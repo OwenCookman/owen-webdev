@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import payment
+from .views import payment, summary
 
 
 urlpatterns = [
-    path('', payment, name="payment"),
+    path('payment/<slug>', payment, name="payment"),
+    path('summary/<slug>', summary, name="summary")
 ]
