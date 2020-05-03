@@ -5,7 +5,7 @@
 {% block head_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-    //<![CDATA[
+	//<![CDATA[
     Stripe.publishablekey = '{{ publishable }}';
     //]]>
 </script>
@@ -14,23 +14,25 @@
 
 {% block page_title %}Make a Payment{% endblock %}
 {% block content %}
+<section>
+	<p>Your total for this payment is £{{ to_pay|floatformat:2 }}</p>
+</section>
+<section>
+	<form role="form" method="post" id="payment-form">
+		<legend>Payment Details</legend>
 
-<p>Your total for this payment is £{{ to_pay|floatformat:2 }}</p>
+		<div id="credit-card-errors" style="display: none;">
+			<div class="alert-message block-message error" id="stripe-error-message"></div>
+		</div>
 
-<form role="form" method="post" id="payment-form">
-    <legend>Payment Details</legend>
+		<div>
+			{{ payment_form | as_bootstrap }}
+		</div>
 
-    <div id="credit-card-errors" style="display: none;">
-        <div class="alert-message block-message error" id="stripe-error-message"></div>
+		{% csrf_token %}
+		<div class="form-group col-md-12">
+			<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
-
-    <div>
-        {{ payment_form | as_bootstrap }}
-    </div>
-
-    {% csrf_token %}
-    <div class="form-group col-md-12">
-        <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-    </div>
-</form>
+	</form>
+</section>
 {% endblock %}
