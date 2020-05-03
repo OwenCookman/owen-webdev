@@ -2,57 +2,56 @@
 {% load static %}
 
 {% block page_title %}Summary{% endblock %}
-{% block content %}
 
-<div class="row">
-	<div class="col">
-		<p>Below is a summary of your order</p>
+{% block page_heading %}<h1 class="title">Summary of your payment</h1>{% endblock %}
+
+{% block content %}
+<section>
+	<div class="row">
+		<div class="col">
+			<p>Business Name</p>
+		</div>
+		<div class="col">
+			<p>website type</p>
+		</div>
+		<div class="col">
+			<p>Total cost when work is finished</p>
+		</div>
+		<div class="col">
+			<p>Total to pay now</p>
+		</div>
+		<div class="col">
+			<p>Date work was requested</p>
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col">
-		<p>Business Name</p>
+	<div class="row">
+		<div class="col">
+			<p>{{ this_order.business_name }}</p>
+		</div>
+		<div class="col">
+			<p>{{ this_order.website }}</p>
+		</div>
+		<div class="col">
+			<p>£{{ this_order.price|floatformat:2 }}</p>
+		</div>
+		<div class="col">
+			<p>{{ to_pay|floatformat:2 }}</p>
+		</div>
+		<div class="col">
+			<p>{{ this_order.date }}</p>
+		</div>
 	</div>
-	<div class="col">
-		<p>website type</p>
+	<div class="row">
+		<div class="col">
+			<a id="PrintPage" href="#">Print</a>
+		</div>
 	</div>
-	<div class="col">
-		<p>Total cost when work is finished</p>
+	<div class="row">
+		<div class="col">
+			<a href="{% url 'payment' slug=this_order.id %}">
+				<button>Make Payment</button>
+			</a>
+		</div>
 	</div>
-    <div class="col">
-		<p>Total to pay now</p>
-	</div>
-	<div class="col">
-		<p>Date work was requested</p>
-	</div>
-</div>
-<div class="row">
-	<div class="col">
-		<p>{{ this_order.business_name }}</p>
-	</div>
-	<div class="col">
-		<p>{{ this_order.website }}</p>
-	</div>
-	<div class="col">
-		<p>£{{ this_order.price|floatformat:2 }}</p>
-	</div>
-    <div class="col">
-        <p>{{ to_pay|floatformat:2 }}</p>
-    </div>
-	<div class="col">
-		<p>{{ this_order.date }}</p>
-	</div>
-</div>
-<div class="row">
-	<div class="col">
-		<a id="PrintPage" href="#">Print</a>
-	</div>
-</div>
-<div class="row">
-	<div class="col">
-		<a href="{% url 'payment' slug=this_order.id %}">
-        <button>Make Payment</button>
-        </a>
-	</div>
-</div>
+</section>
 {% endblock %}
