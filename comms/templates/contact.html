@@ -3,13 +3,14 @@
 
 {% block page_title %}Contact page{% endblock %}
 
-{% block page_heading %}Contact{% endblock %}
+{% block page_heading %}<h1 class="title">Contact</h1>{% endblock %}
 
 {% block content %}
-
-<form action="{% url 'contact' %}" method="POST">
-{% csrf_token %}
-{{ contact_form | as_bootstrap }}
-<button type="submit">Send</button>
-</form>
+<section>
+	<form action="{% url 'contact' %}" method="POST">
+		{% csrf_token %}
+		{{ contact_form | as_bootstrap }}
+		<button type="submit">Send</button>
+	</form>
+</section>
 {% endblock %}
