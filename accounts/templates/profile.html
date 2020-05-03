@@ -79,14 +79,17 @@
 	</div>
 </div>
 <div class="row">
-<div class="col">
-<p>Answer: {{ question.Answer }}</p>
-</div>
+	<div class="col">
+		<p>Answer: {{ question.Answer }}</p>
+	</div>
 </div>
 <div class="row">
-<div class="col">
-<a href="{% url 'edit_question' slug=question.id %}">Edit</a>
-</div>
+	<div class="col">
+		<a href="{% url 'edit_question' slug=question.id %}">Edit</a>
+	</div>
+    <div class="col">
+		<a href="#" id="DeleteBtn">Delete</a>
+	</div>
 </div>
 {% endfor %}
 {% else %}
