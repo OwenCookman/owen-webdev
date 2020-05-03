@@ -5,71 +5,92 @@
 {% block page_heading %}Home{% endblock %}
 
 {% block content %}
-<div class="row">
-	<div class="col">
-		<h1 class="title">Welcome</h1>
-		<p>Are you looking for a new personal or business website? One that works on all screen sizes and uses up to
-			date
-			languages with modern website design aimed at your target audience, customers or clients? Then please read
-			on to see
-			how I can help you with your online presence.</p>
+<section>
+	<div class="row">
+		<div class="col">
+			<h1 class="title">Welcome</h1>
+			<p>Are you looking for a new personal or business website? One that works on all screen sizes and uses up to
+				date
+				languages with modern website design aimed at your target audience, customers or clients? Then please
+				read
+				on to see
+				how I can help you with your online presence.</p>
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-md-3 col-sm-6">
-		<a>
-			<i class="fas fa-edit intro-icon"></i>
-			<span class="title">Tailored Website</span>
-		</a>
+</section>
+<section>
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<a>
+				<i class="fas fa-edit intro-icon"></i>
+				<span class="title">Tailored Website</span>
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<a>
+				<i class="fas fa-crosshairs intro-icon"></i>
+				<span class="title">Targeted Design</span>
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<a>
+				<i class="fas fa-laptop-code intro-icon"></i>
+				<span class="title">Modern languages</span>
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<a>
+				<i class="fas fa-mobile-alt intro-icon"></i>
+				<span class="title">Responsive</span>
+			</a>
+		</div>
 	</div>
-	<div class="col-md-3 col-sm-6">
-		<a>
-			<i class="fas fa-crosshairs intro-icon"></i>
-			<span class="title">Targeted Design</span>
-		</a>
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<a>
-			<i class="fas fa-laptop-code intro-icon"></i>
-			<span class="title">Modern languages</span>
-		</a>
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<a>
-			<i class="fas fa-mobile-alt intro-icon"></i>
-			<span class="title">Responsive</span>
-		</a>
-	</div>
-</div>
-<div class="row">
-	<div class="col">
-		<h2 class="title">About Me</h2>
-		<p>My name is Owen Cookman and I am a freelance web developer<br>
+</section>
+<section>
+	<div class="row">
+		<div class="col">
+			<h2 class="title">About Me</h2>
+			<p>My name is Owen Cookman and I am a freelance web developer<br>
 I grew up surrounded by a tech enthusiastic family, my father has always been interested in new technology and built
-our family computers, my eldest brother also gained an interest in this and became a computer technician later in life, 
+our family computers, my eldest brother also gained an interest in this and became a computer technician later in life,
 my other brother studied computer science at university. During this time I also found an interest in coding and
-learned a small amount from him but later followed my passion for music, although an amazing skill to have it hasn't led 
+learned a small amount from him but later followed my passion for music, although an amazing skill to have it hasn't led
 me to a career.<br>
 Seizing the oportunity to retrain in a skill that both interested me and was in high demand I learned how to be a
 software developer focusing on the process of designing and building websites from start to finish.</p>
+		</div>
 	</div>
-</div>
-<div class="row">
-<div class="col">
-<h2 class="title">What I Do</h2>
-<p>As a Fullstack developer I handle both the front end and back end of the development process. The front end involves 
-the design and overall look of your website, if you have a design and look in mind I will try to make it a reality. I 
-can also provide consultation and/or suggestions to help make your website more user friendly and more appealing to your
-target customers/audience. The front end is everything that you can see and interact with on the web page while the back
-end is the turning cogs that you can't see that make the features of your website work. The back end involves things such as 
-databases where user information can be stored or where all of the information about your products is held to be rendered on
-to a page for your customer to see.<br>
-Registering <a href="{% url 'registration' %}">here</a> will give you access to a contact 
-page where you will be asked a few questions about your business and what you would like your website to do. I will
-contact you for any extra information that I might need and will keep you up to date throughout the development 
-process. There will also be a status update in your personal profile.</p>
-</div>
-</div>
-
+</section>
+<section>
+	<div class="row">
+		<div class="col">
+			<h2 class="title">What I Do</h2>
+			<p>As a Fullstack developer I handle both the front end and back end of the development process. The front
+				end
+				involves
+				the design and overall look of your website, if you have a design and look in mind I will try to make it
+				a
+				reality. I
+				can also provide consultation and/or suggestions to help make your website more user friendly and more
+				appealing to your
+				target customers/audience. The front end is everything that you can see and interact with on the web
+				page
+				while the back
+				end is the turning cogs that you can't see that make the features of your website work. The back end
+				involves things such as
+				databases where user information can be stored or where all of the information about your products is
+				held
+				to be rendered on
+				to a page for your customer to see.<br>
+Registering <a href="{% url 'registration' %}">here</a> will give you access to a contact
+				page where you will be asked a few questions about your business and what you would like your website to
+				do.
+				I will
+				contact you for any extra information that I might need and will keep you up to date throughout the
+				development
+				process. There will also be a status update in your personal profile.</p>
+		</div>
+	</div>
+</section>
 
 {% endblock %}
