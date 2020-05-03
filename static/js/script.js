@@ -4,4 +4,9 @@ $(document).ready(function () {
         window.print();
     });
     
+
+    $('#DeleteBtn').click(function(){
+         $("#delete").modal("show");
+    });
+
 });
