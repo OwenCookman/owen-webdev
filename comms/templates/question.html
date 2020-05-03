@@ -4,11 +4,16 @@
 {% block page_title %}Send a Message{% endblock %}
 
 {% block content %}
-
-{% csrf_token %}
-<form action="{% url 'question' %}" method="POST">
-{% csrf_token %}
-{{ question_form | as_bootstrap }}
-<button type="submit">Send</button>
-</form>
+<section>
+	<p>Please fill out the below form to leave me a message about a project that you would like to work on or to ask
+		any questions that you might have.</p>
+</section>
+<section>
+	{% csrf_token %}
+	<form action="{% url 'question' %}" method="POST">
+		{% csrf_token %}
+		{{ question_form | as_bootstrap }}
+		<button type="submit">Send</button>
+	</form>
+</section>
 {% endblock %}
