@@ -9,11 +9,12 @@ body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background-color: #fafafa;
+    background-color: #343a40;
 }
 
 section {
-    padding: 3rem;
+    padding: 2rem;
+    background-color: #343a40;
 }
 
 footer {

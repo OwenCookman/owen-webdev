@@ -13,7 +13,8 @@ body {
 }
 
 section {
-    padding: 3rem;
+    padding: 2rem;
+    background-color: #343a40;
 }
 
 footer {
