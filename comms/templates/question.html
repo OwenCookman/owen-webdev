@@ -11,7 +11,7 @@
 </section>
 <section>
 	{% csrf_token %}
-	<form action="{% url 'question' %}" method="POST">
+	<form action="" method="POST">
 		{% csrf_token %}
 		{{ question_form | as_bootstrap }}
 		<button type="submit">Send</button>
