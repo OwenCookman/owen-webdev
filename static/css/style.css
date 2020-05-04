@@ -42,7 +42,7 @@ img {
     font-family: 'Inria Sans', sans-serif;
 }
 
-.nav-bg {
+.bg-primary {
     background-color: #021527!important;
 }
 
@@ -58,4 +58,10 @@ img {
 
 #id_website_1 {
     display: none;
+}
+
+/* messages */
+
+ul {
+    list-style-type: none;
 }
