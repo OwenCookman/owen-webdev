@@ -20,9 +20,10 @@ def create_question(request):
             if request.user.is_authenticated:
                 question.client = request.user
                 question.save()
-                return redirect('profile')
                 messages.success(
                     request, "Thank you for your message, I will get back to you shortly")
+                return redirect('profile')
+
             else:
                 question.client = None
                 question.save()
