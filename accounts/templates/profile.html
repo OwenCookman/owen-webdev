@@ -93,7 +93,7 @@
 			<a href="{% url 'edit_question' slug=question.id %}">Edit</a>
 		</div>
 		<div class="col">
-			<a href="#" id="DeleteBtn">Delete</a>
+			<a href="{% url 'delete_question' slug=question.id %}">Delete</a>
 		</div>
 	</div>
 	{% endfor %}
