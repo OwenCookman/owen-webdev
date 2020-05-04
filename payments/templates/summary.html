@@ -43,14 +43,12 @@
 	</div>
 	<div class="row">
 		<div class="col">
-			<a id="PrintPage" href="#">Print</a>
+			<a id="PrintPage" class="btn btn-secondary" href="#">Print</a>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<a href="{% url 'payment' slug=this_order.id %}">
-				<button>Make Payment</button>
-			</a>
+			<a class="btn btn-primary" href="{% url 'payment' slug=this_order.id %}">Make Payment</a>
 		</div>
 	</div>
 </section>
