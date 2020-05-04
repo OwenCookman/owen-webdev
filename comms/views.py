@@ -20,11 +20,13 @@ def query(request):
             if request.user.is_authenticated:
                 question.client = request.user
                 question.save()
+                return redirect('profile')
+                messages.success(request, "Thank you for your message, I will get back to you shortly")
             else:
                 question.client = None
                 question.save()
-            messages.success(request, "Thank you for your message, I will get back to you shortly")
-            return redirect('index')
+                messages.success(request, "Thank you for your message, I will get back to you shortly")
+                return redirect('index')
 
         else:
             messages.warning(request, "Sorry your message could not be posted, please try again")
