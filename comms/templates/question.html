@@ -14,7 +14,7 @@
 	<form action="" method="POST">
 		{% csrf_token %}
 		{{ question_form | as_bootstrap }}
-		<button type="submit">Send</button>
+		<button class="btn btn-secondary" type="submit">Send</button>
 	</form>
 </section>
 {% endblock %}
