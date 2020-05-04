@@ -1,8 +1,8 @@
 from django.shortcuts import render, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import MakePayment
 from django.conf import settings
+from .forms import MakePayment
 from comms.models import order
 import stripe
 # Create your views here.
@@ -40,7 +40,14 @@ def payment(request, slug):
                 messages.error(
                     request, "Card declined, Unable to take payment from this card")
             if customer.paid:
-                messages.error(request, "Payment taken successfully")
+                messages.success(request, "Payment taken successfully")
+                if this_order.deposit_paid:
+                    this_order.final_paid = True
+                    this_order.save()
+                    return redirect(reverse('profile'))
+                else:
+                    this_order.deposit_paid = True
+                    this_order.save()
                 return redirect(reverse('profile'))
             else:
                 messages.error(request, "Unable to take payment")
