@@ -4,16 +4,21 @@
 {% block page_title %}Are you sure?{% endblock %}
 
 {% block content %}
-
-<p>Are you sure you want to delete the below question?</p>
-
-<p>{{ question.question }}</p>
-
-<form method="POST" action="{% url 'delete_question' slug=question.id %}">
-{% csrf_token %}
-	<a href="{% url 'profile' %}">Cancel</a>
-
-	<input type="submit" name="Confirm">
-</form>
-
-	{% endblock %}
+<section>
+	<p>Are you sure you want to delete the below question?</p>
+	<p>{{ question.question }}</p>
+</section>
+<section>
+	<form method="POST" action="{% url 'delete_question' slug=question.id %}">
+		{% csrf_token %}
+		<div class="row">
+			<div class="col">
+				<a href="{% url 'profile' %}"><button class="btn btn-secondary">Cancel</button></a>
+			</div>
+			<div class="col">
+				<input class="btn btn-danger" type="submit" name="Confirm">
+            </div>
+		</div>
+	</form>
+</section>
+{% endblock %}
