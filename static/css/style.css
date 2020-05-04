@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #343a40;
+    background-color: #05203b;
 }
 
 body {
@@ -14,10 +14,11 @@ body {
 
 section {
     padding: 1rem;
+    max-width: 60%;
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #05203b;
     color: #fafafa;
 }
 
@@ -41,7 +42,7 @@ img {
 }
 
 .nav-bg {
-    background-color: #343a40!important;
+    background-color: #05203b!important;
 }
 
 .row {
