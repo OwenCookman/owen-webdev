@@ -77,7 +77,9 @@ ul {
 
 #id_name, #div_id_email, 
 #id_business_name, #id_url,
-#id_credit_card_number {
+#id_credit_card_number,
+#id_username, #id_password,
+#id_password1, #id_password2 {
     max-width: 15rem;
     margin: 0 auto;
 }
