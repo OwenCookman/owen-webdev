@@ -19,7 +19,7 @@ body {
 }
 
 .content {
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: 80%;
     margin: 0 auto;
 }
@@ -75,7 +75,8 @@ ul {
 /* forms */
 
 #id_name, #div_id_email, 
-#id_business_name, #id_url {
+#id_business_name, #id_url,
+#id_credit_card_number {
     max-width: 15rem;
     margin: 0 auto;
 }
@@ -85,3 +86,11 @@ ul {
     max-width: 60%;
     margin: 0 auto;
 }
+
+#id_CVV, #id_expiry_month,
+#id_expiry_year {
+    max-width: 5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
