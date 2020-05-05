@@ -16,6 +16,7 @@ an estimated build time and the price of your build. If you wish to continue 50%
 be paid as a deposit, once completed the remaining cost will need to be paid.</p>
 </div>
 <div class="content">
+<p>Fields marked * are required</p>
 	<form action="{% url 'contact' %}" method="POST">
 		{% csrf_token %}
 		{{ contact_form | as_bootstrap }}
