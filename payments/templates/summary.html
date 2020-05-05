@@ -6,7 +6,7 @@
 {% block page_heading %}<h1 class="title">Summary of your payment</h1>{% endblock %}
 
 {% block content %}
-<section>
+<div class="content">
 	<div class="row">
 		<div class="col">
 			<p>Business Name</p>
@@ -51,5 +51,5 @@
 			<a class="btn btn-primary" href="{% url 'payment' slug=this_order.id %}">Make Payment</a>
 		</div>
 	</div>
-</section>
+</div>
 {% endblock %}

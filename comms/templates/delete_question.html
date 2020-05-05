@@ -4,11 +4,11 @@
 {% block page_title %}Are you sure?{% endblock %}
 
 {% block content %}
-<section>
+<div class="content">
 	<p>Are you sure you want to delete the below question?</p>
 	<p>{{ question.question }}</p>
-</section>
-<section>
+</div>
+<div class="content">
 	<form method="POST" action="{% url 'delete_question' slug=question.id %}">
 		{% csrf_token %}
 		<div class="row">
@@ -20,5 +20,5 @@
             </div>
 		</div>
 	</form>
-</section>
+</div>
 {% endblock %}

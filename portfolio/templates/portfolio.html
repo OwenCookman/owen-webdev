@@ -6,7 +6,7 @@
 {% block page_heading %}<h1 class="title">Portfolio</h1>{% endblock %}
 
 {% block content %}
-<section>
+<div class="content">
 	<div class="row">
 		<div class="col">
 			<p>Below are a few examples of what I have done during my developement career<br>
@@ -17,16 +17,16 @@ please find a link to my GitHub repo to view the code used where I can share thi
 Clicking the image will take you to the deployed website.</p>
 		</div>
 	</div>
-</section>
+</div>
 
-<section>
+<div class="content">
 	<div class="row">
-		<div class="col-4">
+		<div class="col">
 			<a href="https://milestoneprojectmoviestore.herokuapp.com/" target="blank">
 				<img src="{% static 'media/images/MSP3snippet.png' %}" alt="My third milestone project">
     </a>
 		</div>
-		<div class="col-8">
+		<div class="col">
 			<h4>The Moviestore</h4>
 			<a href="https://github.com/OwenCookman/MovieStore" target="blank">
 				<h5>GitHub Repo</h5>
@@ -40,10 +40,10 @@ Clicking the image will take you to the deployed website.</p>
             which is a back end language.</p>
 		</div>
 	</div>
-</section>
-<section>
+</div>
+<div class="content">
 	<div class="row">
-		<div class="col-8">
+		<div class="col">
 			<h4>The Memory Game</h4>
 			<a href="https://github.com/OwenCookman/MilestoneProject2" target="blank">
 				<h5>GitHub Repo</h5>
@@ -54,21 +54,21 @@ Clicking the image will take you to the deployed website.</p>
             that introduce new challenges for them to beat. This was created primarily through the use of
             JavaScript adding and removing classes to animate cards and put them in to certain states. </p>
 		</div>
-		<div class="col-4">
+		<div class="col">
 			<a href="https://owencookman.github.io/MilestoneProject2/" target="blank">
 				<img src="{% static 'media/images/MSP2snippet.png' %}" alt="My second milestone project">
             </a>
 		</div>
 	</div>
-</section>
-<section>
+</div>
+<div class="content">
 	<div class="row">
-		<div class="col-4">
+		<div class="col">
 			<a href="https://owencookman.github.io/Milestone-project-1/" target="blank">
 				<img src="{% static 'media/images/MSP1snippet.png' %}" alt="My first milestone project">
                 </a>
 		</div>
-		<div class="col-8">
+		<div class="col">
 			<h4>The Warhammer introduction page</h4>
 			<a href="https://github.com/OwenCookman/Milestone-project-1" target="blank">
 				<h5>GitHub Repo</h5>
@@ -82,6 +82,6 @@ Clicking the image will take you to the deployed website.</p>
                 designs.</p>
 		</div>
 	</div>
-</section>
+</div>
 
 {% endblock %}

@@ -6,10 +6,10 @@
 {% block page_heading %}<h1 class="title">{{ user }}'s profile</h1>{% endblock %}
 
 {% block content %}
-<section>
+<div class="content">
 	<p>{{ profile.email }}</p>
-</section>
-<section>
+</div>
+<div class="content">
 	{% if orders %}
 	{% for order in orders %}
 	<div class="row">
@@ -71,9 +71,9 @@
 	<p>There are currently no orders in your profile, to make an order please fill out the contact form <a
 			href="{% url 'contact' %}">here.</a></p>
 	{% endif %}
-</section>
+</div>
 
-<section>
+<div class="content">
 	{% if questions %}
 	{% for question in questions %}
 	<div class="row">
@@ -98,6 +98,6 @@
 	{% else %}
 	<p>No questions to display, if you have a question please click <a href="{% url 'question' %}">here.</a></p>
 	{% endif %}
-</section>
+</div>
 
 {% endblock %}

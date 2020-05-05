@@ -14,10 +14,10 @@
 
 {% block page_title %}Make a Payment{% endblock %}
 {% block content %}
-<section>
+<div class="content">
 	<p>Your total for this payment is £{{ to_pay|floatformat:2 }}</p>
-</section>
-<section>
+</div>
+<div class="content">
 	<form role="form" method="post" id="payment-form">
 		<legend>Payment Details</legend>
 
@@ -34,5 +34,5 @@
 			<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
 	</form>
-</section>
+</div>
 {% endblock %}

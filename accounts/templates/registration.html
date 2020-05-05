@@ -7,14 +7,14 @@
 {% block page_heading %}<h1 class="title">Registration</h1>{% endblock %}
 
 {% block content %}
-<section>
+<div class="content">
 	<p>If you are already registered please <a href="{% url 'login' %}">Login</a> here</p>
-</section>
-<section>
+</div>
+<div class="content">
 	<form method="POST">
 		{% csrf_token %}
 		{{ registration_form | as_bootstrap }}
 		<button type="submit">Register</button>
 	</form>
-</section>
+</div>
 {% endblock %}
