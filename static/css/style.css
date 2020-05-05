@@ -10,9 +10,15 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: #fafafa;
+    max-width: 100%;
 }
 
-section {
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content {
     padding: 1rem;
     max-width: 80%;
     margin: 0 auto;
@@ -64,4 +70,18 @@ img {
 
 ul {
     list-style-type: none;
+}
+
+/* forms */
+
+#id_name, #div_id_email, 
+#id_business_name, #id_url {
+    max-width: 15rem;
+    margin: 0 auto;
+}
+
+#id_functionality, #id_business_type,
+#id_customer, #id_message, #id_question {
+    max-width: 60%;
+    margin: 0 auto;
 }
