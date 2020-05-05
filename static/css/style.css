@@ -94,3 +94,18 @@ ul {
     text-align: center;
 }
 
+/* messages */
+
+.success {
+    color: rgb(0, 255, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 255, 0);
+}
+
+.warning {
+    color: red;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
