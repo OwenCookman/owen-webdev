@@ -22,12 +22,12 @@
 	</nav>
 	<hr>
 	{% if messages %}
-	<section>
+	<div class="content">
 		<ul class="messages">
 			{% for message in messages %}
 			<li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
 				{% endfor %}
 		</ul>
-	</section>
+	</div>
 	{% endif %}
 </header>
