@@ -60,6 +60,7 @@ img {
 .intro-icon {
     display: block;
     font-size: 6rem;
+    cursor: pointer;
 }
 
 #id_website_1 {
