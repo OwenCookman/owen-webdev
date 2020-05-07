@@ -80,7 +80,7 @@ def contact(request):
             contact = contact_form.save(commit=False)
             contact.client = request.user
             contact.save()
-            messages.success(request, "Your form submitted successfully")
+            messages.success(request, "Thank you, I will assess your order and be in touch soon via email")
             #message = "A user has created an order"
             #subject = "order"
             #from_email = request.user.email
