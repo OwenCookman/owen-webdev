@@ -25,7 +25,7 @@
 		<div class="col-3">
 			<p>Description</p>
 		</div>
-        <div class="col-3">
+		<div class="col-3">
 			<p>Paid with</p>
 		</div>
 		<div class="col-3">
@@ -39,7 +39,7 @@
 		<div class="col-3">
 			{{ this_invoice.description }}
 		</div>
-        <div class="col-3">
+		<div class="col-3">
 			{{ this_invoice.card_type }} - ****-****-****-{{ this_invoice.last4 }}
 		</div>
 		<div class="col-3">
@@ -59,13 +59,20 @@
 	</div>
 </div>
 <div class="content">
-<div class="row">
-<div class="col">
-<p>Owen Cookman<br>
+	<div class="row">
+		<div class="col">
+			<a id="PrintPage" class="btn btn-secondary" href="#">Print</a>
+		</div>
+	</div>
+</div>
+<div class="content">
+	<div class="row">
+		<div class="col">
+			<p>Owen Cookman<br>
 Ozzycookman@hotmail.com<br>
 07903800951</p>
-</div>
-</div>
+		</div>
+	</div>
 </div>
 
 {% endblock %}
