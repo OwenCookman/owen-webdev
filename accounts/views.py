@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from comms.models import order, question
+from payments.models import invoice
 
 # Create your views here.
 
@@ -31,10 +32,10 @@ def login(request):
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
-            messages.success(request, "You have successfully logged in!")
 
             if user:
                 auth.login(user=user, request=request)
+                messages.success(request, "You have successfully logged in!")
                 return redirect(reverse('index'))
             else:
                 login_form.add_error(
@@ -75,6 +76,8 @@ def user_profile(request):
     """The user's profile page where the user's orders are displayed"""
     user = User.objects.get(email=request.user.email)
     orders = order.objects.filter(client=request.user.id)
+    invoices = invoice.objects.filter(client=request.user.id)
     questions = question.objects.filter(client=request.user.id)
-    context = {'profile': user, 'orders': orders, 'questions': questions}
+    context = {'profile': user, 'orders': orders,
+               'questions': questions, 'invoices': invoices}
     return render(request, 'profile.html', context)
