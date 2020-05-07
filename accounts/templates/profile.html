@@ -74,6 +74,20 @@
 </div>
 
 <div class="content">
+	{% if invoices %}
+	{% for invoice in invoices %}
+	<div class="row">
+		<div class="col">
+			<a href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a>
+		</div>
+	</div>
+	{% endfor %}
+	{% else %}
+	<p>There are currently no invoices to display.</p>
+	{% endif %}
+</div>
+
+<div class="content">
 	{% if questions %}
 	{% for question in questions %}
 	<div class="row">
