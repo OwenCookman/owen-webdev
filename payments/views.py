@@ -4,10 +4,20 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import MakePayment
 from comms.models import order
+from .models import invoice
+from django.contrib.auth.models import User
 import stripe
 # Create your views here.
 
 stripe.api_key = settings.STRIPE_SECRET
+
+
+@login_required()
+def user_invoice(request, slug):
+    user = User.objects.get(email=request.user.email)
+    this_invoice = invoice.objects.get(id=slug)
+    context = {'user': user, 'this_invoice': this_invoice}
+    return render(request, 'invoice.html', context)
 
 
 @login_required()
@@ -25,7 +35,6 @@ def payment(request, slug):
 
     if request.method == "POST":
         payment_form = MakePayment(request.POST)
-        print(payment_form)
 
         if payment_form.is_valid():
 
@@ -40,6 +49,22 @@ def payment(request, slug):
                 messages.error(
                     request, "Card declined, Unable to take payment from this card")
             if customer.paid:
+                new_invoice = invoice()
+                new_invoice.business_name = this_order.business_name
+                new_invoice.start_date = this_order.date
+                new_invoice.card_type = customer.payment_method_details.card.brand
+                new_invoice.last4 = customer.payment_method_details.card.last4
+                new_invoice.amount_charged = to_pay
+                new_invoice.stripe_receipt = customer.receipt_url
+                new_invoice.client = this_order.client
+                if this_order.deposit_paid:
+                    new_invoice.remaining_cost = 0
+                    new_invoice.description = "Payment for completed website build"
+                else:
+                    new_invoice.remaining_cost = to_pay
+                    new_invoice.description = "Deposit payment to begin website build"
+                new_invoice.save()
+
                 messages.success(request, "Payment taken successfully")
                 if this_order.deposit_paid:
                     this_order.final_paid = True
