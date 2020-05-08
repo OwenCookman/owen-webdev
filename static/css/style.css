@@ -48,6 +48,14 @@ img {
     max-width: 400px;
 }
 
+.hire-me-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+
 .footer-note {
     font-size: 0.5rem;
 }
@@ -91,11 +99,12 @@ ul {
 #id_password1, #id_password2 {
     max-width: 15rem;
     margin: 0 auto;
+    text-align: center;
 }
 
 #id_functionality, #id_business_type,
 #id_customer, #id_message, #id_question {
-    max-width: 60%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -109,29 +118,19 @@ ul {
 /* messages */
 
 .messages li {
-    padding: 1.5rem;
-    max-width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     border-radius: 15px;
-    margin-bottom: 20px;
 }
 
 .success {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(0, 255, 0);
+    background-color: #93c54b78;
 }
 
 .warning {
-    color: rgb(172, 5, 5);
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(172, 5, 5);
+   background-color: #ff000085;
 }
 
 .error {
-    color: rgb(255, 0, 0);
-    border-style: solid;
-    border-width: 1px;
-    border-color:rgb(255, 0, 0);
+    background-color: 
 }
