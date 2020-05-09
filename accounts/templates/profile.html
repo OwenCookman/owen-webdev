@@ -20,63 +20,51 @@
 						{% if orders %}
 						{% for order in orders %}
 						<div class="row">
-							<div class="col-3">
-								<p>Business Name</p>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h5 class="title">Business Name</h5>
 							</div>
-							<div class="col-3">
-								<p>Total cost</p>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h5 class="title">Total Cost</h5>
 							</div>
-							<div class="col-3">
-								<p>Status</p>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h5>Status</h5>
 							</div>
-							<div class="col-3">
-								<p>Date requested</p>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h5 class="title">Date Requested</h5>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-3">
+							<div class="col-lg-3 col-md-3 col-sm-6">
 								<p>{{ order.business_name }}</p>
 							</div>
-							<div class="col-3">
+							<div class="col-lg-3 col-md-3 col-sm-6">
 								{% if order.price == 0 %}
 								<p>Awaiting confirmation</p>
 								{% else %}
 								<p>£{{ order.price|floatformat:2 }}</p>
 								{% endif %}
 							</div>
-							<div class="col-3">
+							<div class="col-lg-3 col-md-3 col-sm-6">
 								{% if order.pay_deposit is False %}
 								<p>Awaiting confirmation</p>
 								{% elif order.pay_deposit is True and order.deposit_paid is False %}
-								<div class="row">
-									<div class="col">
-										<form action="{% url 'summary' slug=order.id %}">
-											<input class="btn btn-primary" type="submit" value="Pay Deposit">
-		</form>
-									</div>
-								</div>
-								{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
-								<div class="row">
-									<div class="col">
-										<p>Deposit paid, awaiting completion</p>
-									</div>
-								</div>
-								{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
-								<div class="row">
-									<div class="col">
-										<form action="{% url 'summary' slug=order.id %}">
-											<input class="btn btn-primary" type="submit" value="Final Payment">
-		</form>
-									</div>
-								</div>
-								{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
-								<p>Final payment made</p>
-								{% endif %}
+								<form action="{% url 'summary' slug=order.id %}">
+									<input class="btn btn-primary" type="submit" value="Pay Deposit"></form>
+									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
+											<p>Deposit paid, awaiting completion</p>
+									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
+
+											<form action="{% url 'summary' slug=order.id %}">
+												<input class="btn btn-primary" type="submit" value="Final Payment"></form>
+									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
+									<p>Final payment made</p>
+									{% endif %}
 							</div>
-							<div class="col-3">
+							<div class="col-lg-3 col-md-3 col-sm-6">
 								<p>{{ order.date }}</p>
 							</div>
 						</div>
+						<hr>
 						{% endfor %}
 						{% else %}
 						<p>There are currently no orders in your profile, to make an order please fill out the order
@@ -97,19 +85,22 @@
   </button>
 			<div class="collapse" id="invoiceCollapse">
 				<div class="">
+
+					{% if invoices %}
+					{% for invoice in invoices %}
 					<div class="content">
-						{% if invoices %}
-						{% for invoice in invoices %}
 						<div class="row">
 							<div class="col">
-								<a href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a>
+								<h3><a class="title"
+										href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a></h3>
 							</div>
 						</div>
-						{% endfor %}
-						{% else %}
-						<p>There are currently no invoices to display.</p>
-						{% endif %}
 					</div>
+					{% endfor %}
+					{% else %}
+					<p>There are currently no invoices to display.</p>
+					{% endif %}
+
 				</div>
 			</div>
 		</div>
@@ -127,22 +118,26 @@
 					<div class="content">
 						{% if questions %}
 						{% for question in questions %}
-						<div class="row">
-							<div class="col">
-								<p>Your question: {{ question.question }}</p>
+						<div class="content">
+							<div class="row">
+								<div class="col">
+									<p>Your question: {{ question.question }}</p>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col">
-								<p>Answer: {{ question.Answer }}</p>
+							<div class="row">
+								<div class="col">
+									<p>Answer: {{ question.Answer }}</p>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col">
-								<a class="btn btn-secondary" href="{% url 'edit_question' slug=question.id %}">Edit</a>
-							</div>
-							<div class="col">
-								<a class="btn btn-danger" href="{% url 'delete_question' slug=question.id %}">Delete</a>
+							<div class="row">
+								<div class="col">
+									<a class="btn btn-secondary"
+										href="{% url 'edit_question' slug=question.id %}">Edit</a>
+								</div>
+								<div class="col">
+									<a class="btn btn-danger"
+										href="{% url 'delete_question' slug=question.id %}">Delete</a>
+								</div>
 							</div>
 						</div>
 						{% endfor %}
