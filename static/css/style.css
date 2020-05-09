@@ -190,3 +190,9 @@ ul {
 .align-right {
     text-align: right;
 }
+
+@media (max-width: 575px) {
+    .align-left, .align-right {
+        text-align: center;
+    }
+}
