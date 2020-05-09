@@ -51,7 +51,7 @@ footer {
 }
 
 img {
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .hire-me-btn {
@@ -87,11 +87,9 @@ img {
     color: #e98706;
 }
 
-@media (min-width: 576px) {
     .hidden {
         display: none;
     }
-}
 
 @media (max-width: 575px) {
     .hide-mobile {
@@ -101,6 +99,18 @@ img {
 
 @media (max-width: 575px) {
     .show-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .show-tablet {
         display: block;
     }
 }
