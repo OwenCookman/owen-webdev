@@ -23,7 +23,7 @@ def logout(request):
 
 
 def login(request):
-    """Return a login page"""
+    """Returns a login page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == "POST":
