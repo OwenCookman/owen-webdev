@@ -20,5 +20,13 @@ $(document).ready(function () {
         $('#ResponsiveModal').modal('show');
     });
 
+    $('.rotateClick1').click(function() {
+        $('.rotate1').toggleClass('down');
+    });
+
+    $('.rotateClick2').click(function() {
+        $('.rotate2').toggleClass('down');
+    });
+
 
 });
