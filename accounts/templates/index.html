@@ -45,7 +45,7 @@
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-laptop-code intro-icon" id="ModernLanguages"></i>
-			<span class="title">Modern languages</span>
+			<span class="title">Modern Languages</span>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-mobile-alt intro-icon" id="Responsive"></i>
@@ -54,13 +54,104 @@
 	</div>
 </div>
 
-<!-- About me section -->
-<div class="row">
+<!-- introduction for mobile -->
+<div class="content show-mobile hidden">
+	<div class="accordion" id="mobileAccordion">
+		<div class="card">
+			<div class="card-header" id="tailoredWebsiteMobile">
+				<h2 class="mb-0">
+					<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Tailored Website
+        </button>
+				</h2>
+			</div>
+
+			<div id="collapseOne" class="collapse show" aria-labelledby="tailoredWebsiteMobile"
+				data-parent="#mobileAccordion">
+				<div class="card-body">
+					<p>Many media agencies will build their customer's websites with as much reusable code as possible.
+						Although this is an effective strategy to build websites quickly it can also lead to
+						recognisable
+						features where two different websites look very similar. I will build you a website with any
+						design
+						ideas that you have in mind and will try to keep the website as close to your business image as
+						possible. If you don't have images and logos for your business I can put you in touch with a
+						graphic
+						designer if needed.</p>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="targetedDesignMobile">
+				<h2 class="mb-0">
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Targeted Design
+        </button>
+				</h2>
+			</div>
+			<div id="collapseTwo" class="collapse" aria-labelledby="targetedDesignMobile"
+				data-parent="#mobileAccordion">
+				<div class="card-body">
+					<p>The use of appropriate colours and imagery will give your users an idea of
+						your businesses identity. If you want users to see you as formal and professional,
+						informal fonts and a mix of bright colours won't portray that.</p>
+					<p>I will
+						look at your business and who your customers/clients are. Design with your target audience
+						in mind to ensure that your business is portrayed the way that you want it so your users get the
+						right idea about who you are.</p>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="modernLanguagesMobile">
+				<h2 class="mb-0">
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Modern Languages
+        </button>
+				</h2>
+			</div>
+			<div id="collapseThree" class="collapse" aria-labelledby="modernLanguagesMobile"
+				data-parent="#mobileAccordion">
+				<div class="card-body">
+					<p>The world of coding is constantly moving forwards.</p>
+					<p>To ensure that your website is future proofed I use and stay up to date with the latest
+						coding languages. This will guarantee that your website is innovative and prepared for the
+						ever changing world and utilises the cutting edge of web application features.</p>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="responsiveMobile">
+				<h2 class="mb-0">
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          Responsive
+        </button>
+				</h2>
+			</div>
+			<div id="collapseFour" class="collapse" aria-labelledby="responsiveMobile" data-parent="#mobileAccordion">
+				<div class="card-body">
+					<p>A responsive website has become essential to businesses as their customers and clients
+						expect a smooth, easy to use experience no matter what screen size they are viewing their
+						favourite website on.
+					</p>
+					<p>Whether your users are viewing your website on a TV screen or mobile phone they
+						should have a positive and easy to use experience.</p>
+					<p>I will ensure that your websitelooks great no matter what device it
+						appears on. This will also help future proof your website as different
+						screen resolutions appear on the market.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- About me section for tablet & desktop -->
+<div class="row hide-mobile">
 	<div class="col">
 		<h2 class="title">About Me</h2>
 	</div>
 </div>
-<div class="content">
+<div class="content hide-mobile">
 	<div class="row">
 		<div class="col">
 			<p>My name is Owen Cookman and I am a freelance web developer.</p>
@@ -80,13 +171,38 @@
 	</div>
 </div>
 
-<!-- What I do section -->
-<div class="row">
+<!-- About me section for mobile -->
+<div class="content hidden show-mobile">
+	<a class="rotateClick1" data-toggle="collapse" href="#aboutMeMobile" aria-expanded="false"
+		aria-controls="aboutMeMobile">
+		<h2 class="title">About Me <i class="fas fa-angle-down rotate1"></i></h2>
+	</a>
+	<div class="collapse" id="aboutMeMobile">
+		<div class="card card-body">
+			<p>My name is Owen Cookman and I am a freelance web developer.</p>
+			<p>I grew up surrounded by a tech enthusiastic family. My father has always been interested in new
+				technology and built
+				our family computers. My eldest brother also gained an interest in this and became a computer technician
+				later in life.
+				My other brother studied computer science at university. During this time I also found an interest in
+				coding and
+				learnt a small amount from him but later followed my passion for music, although an amazing skill to
+				have it hasn't led
+				me to a career.</p>
+			<p>Seizing the oportunity to retrain in a skill that both interested me and was in high demand I studied how
+				to be a
+				software developer focusing on the process of designing and building websites from start to finish.</p>
+		</div>
+	</div>
+</div>
+
+<!-- What I do section for tablet & desktop -->
+<div class="row hide-mobile">
 	<div class="col">
 		<h2 class="title">What I Do</h2>
 	</div>
 </div>
-<div class="content">
+<div class="content hide-mobile">
 	<div class="row">
 		<div class="col">
 			<p>As a Fullstack developer I handle both the front end and back end of the development process. The front
@@ -101,7 +217,38 @@
 				involves things such as databases where user information can be stored or where all of the information
 				about your products are
 				held to be rendered on to a page for your customer to see.</p>
-			<p>Registering <a href="{% url 'registration' %}">here</a> will give you access to a contact page where you
+			<p>Registering <a href="{% url 'registration' %}">here</a> will give you access to an order page where you
+				will be asked a few
+				questions about your business and what you would like your website to do. I will contact you for any
+				extra information that
+				I might need and will keep you up to date throughout the development process. There will also be a
+				status update in your
+				personal profile.</p>
+		</div>
+	</div>
+</div>
+
+<!-- What I Do section for mobile -->
+<div class="content hidden show-mobile">
+	<a class="rotateClick2" data-toggle="collapse" href="#whatIDoMobile" aria-expanded="false"
+		aria-controls="whatIDoMobile">
+		<h2 class="title">What I Do <i class="fas fa-angle-down rotate2"></i></h2>
+	</a>
+	<div class="collapse" id="whatIDoMobile">
+		<div class="card card-body">
+			<p>As a Fullstack developer I handle both the front end and back end of the development process. The front
+				end involves the design and overall look of your website, if you have a design and look in mind I will
+				try to make it
+				a reality. I can also provide consultation and/or suggestions to help make your website more user
+				friendly and more
+				appealing to your target customers/audience. The front end is everything that you can see and interact
+				with on the web
+				page while the back end is the turning cogs that you can't see that make the features of your website
+				work. The back end
+				involves things such as databases where user information can be stored or where all of the information
+				about your products are
+				held to be rendered on to a page for your customer to see.</p>
+			<p>Registering <a href="{% url 'registration' %}">here</a> will give you access to an order page where you
 				will be asked a few
 				questions about your business and what you would like your website to do. I will contact you for any
 				extra information that
