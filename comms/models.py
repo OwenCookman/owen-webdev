@@ -6,10 +6,10 @@ from django.contrib.auth.models import User
 
 class order(models.Model):
     WEBSITE_CHOICES = (
-        ('Landing page/Brochure website', 'Landing page/Brochure website'),
+        ('Landing page/ Brochure website', 'Landing page/ Brochure website'),
         ('Multipaged information website',
          'Multipaged information website'),
-        ('Ecommerce/Webstore', 'Ecommerce/Webstore'),
+        ('Ecommerce/ Webstore', 'Ecommerce/ Webstore'),
         ('Something Else', 'Something Else')
     )
     business_name = models.CharField(
