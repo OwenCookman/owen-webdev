@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #021527;
+    background-color: #041e38;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     padding: 1.5rem;
     max-width: 80%;
     margin: 0 auto;
-    background-color: #8e8c8445;
+    background-color: #a6a1c745;
     border-radius: 15px;
     margin-bottom: 20px;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 footer {
-    background-color: #021527;
+    background-color: #041e38;
     color: #fafafa;
 }
 
@@ -72,7 +72,7 @@ img {
 }
 
 .bg-primary {
-    background-color: #021527!important;
+    background-color: #041e38!important;
 }
 
 .row {
