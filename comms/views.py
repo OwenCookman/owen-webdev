@@ -78,7 +78,7 @@ def contact(request):
             contact.client = request.user
             contact.save()
             messages.success(
-                request, "Thank you, I will assess your order and be in touch via email with the cost and time it will take for you build")
+                request, "Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build")
             #message = "A user has created an order"
             #subject = "order"
             #from_email = request.user.email
