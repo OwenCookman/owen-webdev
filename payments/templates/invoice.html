@@ -8,31 +8,32 @@
 {% block content %}
 <div class="content">
 	<div class="row">
-		<div class="col">
-			<p>{{ this_invoice.business_name }}<br>
-{{ user.username }}<br>
-{{ user.email }}</p>
+		<div class="col-lg-6 col-md-6 col-sm-12 align-left">
+			<p>{{ this_invoice.business_name }}</p>
+			<p>{{ user.email }}</p>
+			<p>{{ user.username }}</p>
 		</div>
-		<div class="col">
-			<p>Date of invoice: {{ this_invoice.invoice_date }}<br>
-        Invoice ID: {{ this_invoice.id }}<br>
-        Work start date: {{ this_invoice.start_date }}</p>
+		<div class="col-lg-6 col-md-6 col-sm-12 align-right">
+			<p>Date of invoice: {{ this_invoice.invoice_date }}</p>
+			<p>Invoice ID: {{ this_invoice.id }}</p>
+			<p>Work start date: {{ this_invoice.start_date }}</p>
 		</div>
 	</div>
+
 </div>
-<div class="content">
+<div class="content hide-mobile">
 	<div class="row">
 		<div class="col-3">
-			<p>Description</p>
+			<h4 class="title">Description</h4>
 		</div>
 		<div class="col-3">
-			<p>Paid with</p>
+			<h4 class="title">Paid with</h4>
 		</div>
 		<div class="col-3">
-			<p>Amount Payed</p>
+			<h4 class="title">Amount Paid</h4>
 		</div>
 		<div class="col-3">
-			<p>Remaining cost</p>
+			<h4 class="title">Remaining cost</h4>
 		</div>
 	</div>
 	<div class="row">
@@ -49,6 +50,45 @@
 			£{{ this_invoice.remaining_cost|floatformat:2 }}
 		</div>
 	</div>
+</div>
+<!-- Information for mobile sized screens -->
+<div class="content show-mobile hidden">
+	<div class="row">
+		<div class="col">
+			<h4 class="title">Description</h4>
+		</div>
+		<div class="col">
+			{{ this_invoice.description }}
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col">
+			<h4 class="title">Paid with</h4>
+		</div>
+		<div class="col">
+			{{ this_invoice.card_type }} - ****-****-****-{{ this_invoice.last4 }}
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col">
+			<h4 class="title">Amount Paid</h4>
+		</div>
+		<div class="col">
+			£{{ this_invoice.amount_charged|floatformat:2 }}
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col">
+			<h4 class="title">Remaining cost</h4>
+		</div>
+		<div class="col">
+			£{{ this_invoice.remaining_cost|floatformat:2 }}
+		</div>
+	</div>
+	<hr>
 </div>
 <div class="content">
 	<div class="row">
