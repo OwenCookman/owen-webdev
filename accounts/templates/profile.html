@@ -3,7 +3,7 @@
 
 {% block page_title %}{{ user }}'s profile{% endblock %}
 
-{% block page_heading %}<h1 class="title">{{ user }}'s profile</h1>{% endblock %}
+{% block page_heading %}<h1 class="title spacer">{{ user }}'s profile</h1>{% endblock %}
 
 {% block content %}
 <p>{{ profile.email }}</p>
@@ -11,7 +11,7 @@
 <div class="content">
 	<div class="row">
 		<div class="col">
-			<button class="btn" type="button" data-toggle="collapse" data-target="#orderCollapse" aria-expanded="false" aria-controls="orderCollapse">
+			<button class="btn sub-spacer" type="button" data-toggle="collapse" data-target="#orderCollapse" aria-expanded="false" aria-controls="orderCollapse">
     Your Orders
   </button>
 			<div class="collapse" id="orderCollapse">
@@ -37,7 +37,7 @@
 								{% endif %}
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6">
-								<h4>Status</h4>
+								<h4 class="title">Status</h4>
 								{% if order.pay_deposit is False %}
 								<p>Awaiting confirmation</p>
 								{% elif order.pay_deposit is True and order.deposit_paid is False %}
@@ -70,7 +70,7 @@
 <div class="content">
 	<div class="row">
 		<div class="col">
-			<button class="btn" type="button" data-toggle="collapse" data-target="#invoiceCollapse" aria-expanded="false" aria-controls="invoiceCollapse">
+			<button class="btn sub-spacer" type="button" data-toggle="collapse" data-target="#invoiceCollapse" aria-expanded="false" aria-controls="invoiceCollapse">
     Invoice History
   </button>
 			<div class="collapse" id="invoiceCollapse">
@@ -81,7 +81,7 @@
 					<div class="content">
 						<div class="row">
 							<div class="col">
-								<h3><a class="title"
+								<h3><a class="title spacer"
 										href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a></h3>
 							</div>
 						</div>
@@ -100,7 +100,7 @@
 <div class="content">
 	<div class="row">
 		<div class="col">
-			<button class="btn" type="button" data-toggle="collapse" data-target="#questionCollapse" aria-expanded="false" aria-controls="questionCollapse">
+			<button class="btn sub-spacer" type="button" data-toggle="collapse" data-target="#questionCollapse" aria-expanded="false" aria-controls="questionCollapse">
     Your Questions
   </button>
 			<div class="collapse" id="questionCollapse">
