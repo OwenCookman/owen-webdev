@@ -3,13 +3,13 @@
 
 {% block page_title %}Summary{% endblock %}
 
-{% block page_heading %}<h1 class="title">Summary of your payment</h1>{% endblock %}
+{% block page_heading %}<h1 class="title spacer">Summary of your payment</h1>{% endblock %}
 
 {% block content %}
 <div class="content">
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Business Name</h4>
+			<h4 class="title sub-spacer">Business Name</h4>
 		</div>
 		<div class="col">
 			<p>{{ this_order.business_name }}</p>
@@ -18,7 +18,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Work Requested</h4>
+			<h4 class="title sub-spacer">Work Requested</h4>
 		</div>
 		<div class="col">
 			<p>{{ this_order.date }}</p>
@@ -27,7 +27,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Website Type</h4>
+			<h4 class="title sub-spacer">Website Type</h4>
 		</div>
 		<div class="col">
 			<p>{{ this_order.website }}</p>
@@ -36,7 +36,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Total Cost</h4>
+			<h4 class="title sub-spacer">Total Cost</h4>
 		</div>
 		<div class="col">
 			<p>£{{ this_order.price|floatformat:2 }}</p>
@@ -45,7 +45,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Total to Pay</h4>
+			<h4 class="title sub-spacer">Total to Pay</h4>
 		</div>
 		<div class="col">
 			<p>£{{ to_pay|floatformat:2 }}</p>
