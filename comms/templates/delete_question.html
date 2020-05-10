@@ -3,9 +3,12 @@
 
 {% block page_title %}Are you sure?{% endblock %}
 
+{% block page_heading %}<h1 class="title spacer">Are you sure?</h1>{% endblock %}
+
 {% block content %}
+
 <div class="content">
-	<p>Are you sure you want to delete the below question?</p>
+<h4>Delete:</h4>
 	<p>{{ question.question }}</p>
 </div>
 <div class="content">
@@ -17,7 +20,7 @@
 			</div>
 			<div class="col">
 				<button class="btn btn-danger" type="submit" name="Confirm">Confirm</button>
-            </div>
+			</div>
 		</div>
 	</form>
 </div>
