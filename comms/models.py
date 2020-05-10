@@ -10,7 +10,7 @@ class order(models.Model):
         ('Multipaged information website',
          'Multipaged information website'),
         ('Ecommerce/ Webstore', 'Ecommerce/ Webstore'),
-        ('Something Else', 'Something Else')
+        ('Something else', 'Something else')
     )
     business_name = models.CharField(
         "What is the name of your business?*", max_length=50)
@@ -19,7 +19,7 @@ class order(models.Model):
     functionality = models.CharField(
         "What would you like users to do on your website?*", max_length=1000)
     url = models.CharField(
-        "If you already have a website please add the URL here", max_length=200, null=True, blank=True)
+        "If you already have a website, please add the URL here", max_length=200, null=True, blank=True)
     business_type = models.CharField(
         "What does your business do?*", max_length=2000)
     customer = models.CharField(
