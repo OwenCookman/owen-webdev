@@ -3,7 +3,7 @@
 
 {% block page_title %}{{this_invoice.business_name}} invoice{% endblock %}
 
-{% block page_heading %}<h1 class="title spacer">Invoice for {{this_invoice.business_name}}</h1>{% endblock %}
+{% block page_heading %}<h1 class="title">Invoice for {{this_invoice.business_name}}</h1>{% endblock %}
 
 {% block content %}
 <div class="content">
@@ -24,16 +24,16 @@
 <div class="content hide-mobile">
 	<div class="row">
 		<div class="col-3">
-			<h4 class="title">Description</h4>
+			<h4 class="subtitle">Description</h4>
 		</div>
 		<div class="col-3">
-			<h4 class="title">Paid with</h4>
+			<h4 class="subtitle">Paid with</h4>
 		</div>
 		<div class="col-3">
-			<h4 class="title">Amount Paid</h4>
+			<h4 class="subtitle">Amount Paid</h4>
 		</div>
 		<div class="col-3">
-			<h4 class="title">Remaining cost</h4>
+			<h4 class="subtitle">Remaining cost</h4>
 		</div>
 	</div>
 	<div class="row">
@@ -55,7 +55,7 @@
 <div class="content show-mobile hidden">
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Description</h4>
+			<h4 class="subtitle">Description</h4>
 		</div>
 		<div class="col">
 			{{ this_invoice.description }}
@@ -64,7 +64,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Paid with</h4>
+			<h4 class="subtitle">Paid with</h4>
 		</div>
 		<div class="col">
 			{{ this_invoice.card_type }} - ****-****-****-{{ this_invoice.last4 }}
@@ -73,7 +73,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Amount Paid</h4>
+			<h4 class="subtitle">Amount Paid</h4>
 		</div>
 		<div class="col">
 			£{{ this_invoice.amount_charged|floatformat:2 }}
@@ -82,7 +82,7 @@
 	<hr>
 	<div class="row">
 		<div class="col">
-			<h4 class="title">Remaining cost</h4>
+			<h4 class="subtitle">Remaining cost</h4>
 		</div>
 		<div class="col">
 			£{{ this_invoice.remaining_cost|floatformat:2 }}

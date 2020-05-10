@@ -3,7 +3,7 @@
 
 {% block page_title %}Home page{% endblock %}
 
-{% block page_heading %}<h1 class="title spacer">Welcome</h1>{% endblock %}
+{% block page_heading %}<h1 class="title">Welcome</h1>{% endblock %}
 
 {% block content %}
 <!-- introduction text -->
@@ -22,7 +22,7 @@
 <div class="content">
 	<div class="row">
 		<div class="col">
-			<h2 class="sub-spacer">Ready to get started?</h2>
+			<h2 class="title">Ready to get started?</h2>
 			<div class="row">
 				<div class="col">
 					<a class="btn btn-lrg btn-primary hire-me-btn" href="{% url 'contact' %}">Hire Me!</a>
@@ -34,28 +34,28 @@
 
 <!-- Introduction icons (tablet/desktop) -->
 <div class="content hide-mobile">
-	<div class="row spacer">
+	<div class="row title">
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-edit intro-icon" id="TailoredWebsite"></i>
-			<span class="title">Tailored Website</span>
+			<span>Tailored Website</span>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-crosshairs intro-icon" id="TargetedDesign"></i>
-			<span class="title">Targeted Design</span>
+			<span>Targeted Design</span>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-laptop-code intro-icon" id="ModernLanguages"></i>
-			<span class="title">Modern Languages</span>
+			<span>Modern Languages</span>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6">
 			<i class="fas fa-mobile-alt intro-icon" id="Responsive"></i>
-			<span class="title">Responsive</span>
+			<span>Responsive</span>
 		</div>
 	</div>
 </div>
 
 <!-- introduction for mobile -->
-<h3 class="title hidden show-mobile">Tap below to learn more</h3>
+<h3 class="subtitle hidden show-mobile">Tap below to learn more</h3>
 <div class="show-mobile hidden">
 	<div class="accordion" id="mobileAccordion">
 		<div class="content card">
@@ -148,7 +148,7 @@
 <!-- About me section for tablet & desktop -->
 <div class="row hide-mobile">
 	<div class="col">
-		<h2 class="title spacer">About Me</h2>
+		<h2 class="subtitle">About Me</h2>
 	</div>
 </div>
 <div class="content hide-mobile">
@@ -175,7 +175,7 @@
 <div class="content hidden show-mobile">
 	<a class="rotateClick1" data-toggle="collapse" href="#aboutMeMobile" aria-expanded="false"
 		aria-controls="aboutMeMobile">
-		<h2 class="title">About Me <i class="fas fa-angle-down rotate1"></i></h2>
+		<h2 class="subtitle">About Me <i class="fas fa-angle-down rotate1"></i></h2>
 	</a>
 	<div class="collapse" id="aboutMeMobile">
 		<div class="content card card-body">
@@ -199,7 +199,7 @@
 <!-- What I do section for tablet & desktop -->
 <div class="row hide-mobile">
 	<div class="col">
-		<h2 class="title spacer">What I Do</h2>
+		<h2 class="subtitle">What I Do</h2>
 	</div>
 </div>
 <div class="content hide-mobile">
@@ -232,7 +232,7 @@
 <div class="content hidden show-mobile">
 	<a class="rotateClick2" data-toggle="collapse" href="#whatIDoMobile" aria-expanded="false"
 		aria-controls="whatIDoMobile">
-		<h2 class="title">What I Do <i class="fas fa-angle-down rotate2"></i></h2>
+		<h2 class="subtitle">What I Do <i class="fas fa-angle-down rotate2"></i></h2>
 	</a>
 	<div class="collapse" id="whatIDoMobile">
 		<div class="content card card-body">
