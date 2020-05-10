@@ -24,7 +24,7 @@ body {
     margin: 0 auto;
     background-color: #a6a1c745;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 @media (max-width: 575px) {
@@ -195,4 +195,12 @@ ul {
     .align-left, .align-right {
         text-align: center;
     }
+}
+
+.spacer {
+    margin: 35px;
+}
+
+.sub-spacer {
+    margin-bottom: 35px;
 }
