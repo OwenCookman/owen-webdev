@@ -25,6 +25,7 @@ body {
     background-color: #a6a1c745;
     border-radius: 15px;
     margin-bottom: 35px;
+    margin-top: 10px;
 }
 
 @media (max-width: 575px) {
