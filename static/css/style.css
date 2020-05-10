@@ -69,6 +69,13 @@ img {
 .title {
     font-family: 'Inria Sans', sans-serif;
     color: #3E3F3A;
+    margin: 35px;
+}
+
+.subtitle {
+    font-family: 'Inria Sans', sans-serif;
+    color: #3E3F3A;
+    margin: 15px;
 }
 
 .bg-primary {
@@ -197,10 +204,3 @@ ul {
     }
 }
 
-.spacer {
-    margin: 35px;
-}
-
-.sub-spacer {
-    margin-bottom: 35px;
-}
