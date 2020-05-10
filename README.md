@@ -56,9 +56,9 @@ the inner content **darker** which would seperate **generated** content even tho
 for example when a user asks multiple questions.
 
 #### Fonts
-I decided to go with the **Inria Sans** font as it still looked **professional** and neat but also **different** from what is seen
-on a lot of other web pages, I noticed that this **paired** well with the **Roboto** font so I decided that any **titles** or **headers**
-would be styled with **Inria Sans** and any other blocks of text would use **Roboto**. This further breaks content up and keeps 
+I decided to go with the [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) font as it still looked **professional** and neat but also **different** from what is seen
+on a lot of other web pages, I noticed that this **paired** well with the [**Roboto**](https://fonts.google.com/specimen/Roboto) font so I decided that any **titles** or **headers**
+would be styled with [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) and any other blocks of text would use [**Roboto**](https://fonts.google.com/specimen/Roboto). This further breaks content up and keeps 
 the page looking **interesting**.
 
 #### Favicon
