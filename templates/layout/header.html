@@ -23,7 +23,7 @@
 		</div>
 	</nav>
 	{% if messages %}
-	<div class="messages">
+	<div class="messages title">
 		{% for message in messages %}
 		<div {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
 		{% endfor %}
