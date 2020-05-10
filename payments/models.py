@@ -13,7 +13,7 @@ class invoice(models.Model):
     last4 = models.CharField(max_length=4)
     amount_charged = models.FloatField()
     remaining_cost = models.FloatField()
-    stripe_receipt = models.CharField(max_length=100)
+    stripe_receipt = models.CharField(max_length=1000)
     description = models.CharField(max_length=50)
 
     def __str__(self):
