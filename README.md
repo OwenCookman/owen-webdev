@@ -1,8 +1,8 @@
-Owen Cookman Web Developer
+[Owen Cookman Web Developer](https://owen-cookman-web-dev.herokuapp.com/)
 ======
 [![Build Status](https://travis-ci.com/OwenCookman/owen-webdev.svg?branch=master)](https://travis-ci.com/OwenCookman/owen-webdev)
 
-The objective of this webpage is to advertise myself as a web developer, showcasing my portfolio of previous projects 
+The webpage was created to advertise myself as a web developer, showcasing my portfolio of previous projects 
 which should be regularly updated as more projects are finished, giving those who visit the website an introduction to 
 myself, the work I have done, a way to contact me for consultations and also a way to hire and pay me as a freelance 
 developer.
@@ -48,74 +48,82 @@ As the Developer I expect:
 ### Styling Choices
 
 #### Colours
-I wanted to aim for a neutral colour palette with this website as my clients could be looking to build websites with 
-a whole range of themes. This led me to look at neutral colour groups and I settled on a Charcoal/opaque navbar, this 
-would seperate the navbar from other sections of the page but allow it to be fixed and not obstruct too much on smaller
-screens. I also decided that each section of content would have a navy blue background while the blank areas would be 
-left white, this would allow the text to be left a white colour so that it still stood out on the page but also broke 
-any long pages in to sections rather than being one long list of content.
+I wanted to aim for a **neutral** colour palette with this website as my clients could be looking to build websites with 
+a whole range of **themes**. This led me to look at neutral colour **groups**. I settled on a dark navy blue for the **nav** and 
+**footer** elements, this would **seperate** them from other sections of the page. I decided to keep the page **background** as **white**
+while content would appear on an **opaque field**. This allowed content to be **stacked** within itself making the field around 
+the inner content **darker** which would seperate **generated** content even though they are generated in the same container
+for example when a user asks multiple questions.
 
 #### Fonts
-I decided to go with the Inria Sans font as it still looked professional and neat but also different from what is seen
-on a lot of other web pages, I noticed that this paired well with the Roboto font so I decided that any titles or headers
-would be styled with Inria Sans and any other blocks of text would use Roboto. This further breaks content up and keeps 
-the page looking interesting.
+I decided to go with the **Inria Sans** font as it still looked **professional** and neat but also **different** from what is seen
+on a lot of other web pages, I noticed that this **paired** well with the **Roboto** font so I decided that any **titles** or **headers**
+would be styled with **Inria Sans** and any other blocks of text would use **Roboto**. This further breaks content up and keeps 
+the page looking **interesting**.
 
 #### Favicon
-The favicon was taken from [**PNG Fuel**](https://www.pngfuel.com/free-png/fdyur) I was looking for a simple icon that
-would explaine exactly what the website involves, the laptop with the </> symbol for code was perfect in showing that I 
-am a developer. 
+The favicon was taken from [**PNG Fuel**](https://www.pngfuel.com/free-png/fdyur) I was looking for a **simple** icon that
+would explaine exactly what the website **involves**, the **laptop** with the </> symbol for **code** was perfect in showing that I 
+am a **developer**. 
 
 ### Wireframes 
 
 Please click [here](wireframes) to view my first draft Wireframes, these were originally made using Balsamiq Mock-ups.
 
 #### Changes
-The 'About Me' page and 'What I do' page were later combined on to the index page as this would be the landing point where
-this information could be displayed to sell myself as a developer rather than having two small seperate pages.
+The **'About Me'** page and **'What I do'** page were later combined on to the **index** page as this would be the landing point where
+this information could be displayed to **sell** myself as a **developer** rather than having two small seperate pages.
 
 ## Features
 
 ### Theme
 
 The original Theme was taken from the Bootswatch themes library, the theme Sandstone was used and then styled with CSS to 
-customize it further such as the fonts used and the changes made to the navbar.
+customize it further such as the fonts used and the changes made to the navbar, The buttons provided were kept the same
+as the colours worked well with my palette but the font used in the button was changed to match the other text on the page.
 
 ### navbar
 
 ### Index Page/Introduction
 
-### User Register
+### Portfolio
 
-### User Login
-
-### User Logout
+### User Authentication
 
 ### User Profile
 
-### About Me page
+### Order Page
 
-### What I Do page
+### Contact Me Page
 
-### Portfolio
-
-### Contact page
 
 ## Possible Features To Implement
 - A more detailed contact form using check boxes that could give an estimated cost of the website build to the client
-- A built in chat system allowing text communication to be handled completely on the website
+- A built in chat system allowing text communication to be handled completely on the website for example the chat system used
+by Tutor support at ci
+- The content on the portfolio page to be rendered from the database, with new entries uploaded from the admin pannel
+- Email notifications when visitors/users ask a question and invoices/confirmations sent to users email
 
 ## Technologies Used
 
+### Languages
 - This project uses **HTML**, **CSS**, **JavaScript** and **Python** programming languages
-- [**GitPod**](https://www.gitpod.io/) was used as the development IDE
+### Frameworks & Libraries
+-[**Django 3.0.4**](https://www.djangoproject.com/)
+- [**Stripe**](https://stripe.com/gb)
 - [**Bootstrap**](https://getbootstrap.com/)
 - [**FontAwesome**](https://fontawesome.com/)
 - [**Google Fonts**](https://fonts.google.com/)
 - [**Popper.js**](https://popper.js.org/)
+### Tools
+- [**GitPod**](https://www.gitpod.io/) was used as the development IDE
 - this projects wireframes were created on [**Balsamiq**](https://balsamiq.com/)
 - The CSS code was validated using the [**W3C Markup Validation Service**](https://validator.w3.org/) website
 - The build was tested with [**Travis Continuous Integration**](https://travis-ci.org/)
+### Databases
+- An SQLite database was used in development
+- A PostgreSQL database is used in deployment
+
 
 ## Testing
 
