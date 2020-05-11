@@ -128,3 +128,98 @@ by Tutor support at ci
 ## Testing
 
 To view the testing carried out on this project please click [here](TESTING.md) for my separate testing file
+
+
+## Deployment
+
+The GitPod IDE was used to develop this project and all work was added, committed and 
+pushed to a GitHub repository which was linked with Heroku.
+
+### How to run the project locally
+
+**Note:** some of the commands below may differ depending on your chosen IDE and Operating system, 
+the commands below will work with python 3 installed on a Windows operating system. Some IDEs will
+require "`pip3`" instead of "`pip`" or "`python3`" instead of "`python`" for example.
+
+1. Ensure that you have PIP, Python 3 and Git installed on your machine
+
+2. Save a copy of [this](https://github.com/OwenCookman/owen-webdev) repository by clicking the "Clone 
+or Download" button at the top of the page and select "Download Zip" to extract the Zip file to your chosen folder 
+    2. If you have Git installed, use the below command to clone the repository:
+
+    `git clone https://github.com/OwenCookman/owen-webdev`
+
+3. Open a terminal session in the unzipped folders directory
+
+4. Create a virtual environment by running the below command
+
+`python -m .venv venv`
+
+5. Activate the Virtual environment with the below command
+
+`.venv/Scripts/acivate`
+
+6. Install required modules by running the below command
+
+`pip -r requirements.txt`
+
+7. inside the root directory create a file named env.py, at the top of the document type `import os` 
+and add the environemt variables shown in the heroku deployment with the following syntax:
+
+`os.environ.setdefault("SECRET_KEY", "add your secret key here")`
+
+Run the application with the below command
+
+python manage.py runserver
+
+Visit the website at http://127.0.0.1:5000
+
+
+### How to deploy the project to Heroku
+**Note:** You will require a publishable and secret key from [Stripe](https://stripe.com/gb).
+
+1. In the terminal, run `python manage.py collectstatic` to collect static files for deployment on Heroku.
+
+2. run the below command: 
+    
+    `Pip install whitenoise`
+
+3. Go to your settings.py file and add `'whitenoise.middleware.WhiteNoiseMiddleware'`to the MIDDLEWARE section.
+
+4. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
+
+5. Create a `Procfile` using the terminal command `echo web: python app.py > Procfile`
+    5. Please note that if you are using a Windows operating system the `Procfile` may not format 
+    properly, please create another file named `Procfile` and copy the contents of the terminal 
+    generated `Procfile` over to it, then delete the generated `Procfile`.
+
+6. `git add` and `git commit` both `requirements.txt` and `Procfile` then `git push` your staged files to GitHub.
+
+7. Create a new app on [Heroku](https://www.heroku.com) by clicking the "New" button on the Dashboard, give the new 
+app a name and set the region to your local region.
+
+8. From the new applications dashboard click the "Deploy" tab and in the "Deplyoment Method" section select GitHub and 
+confirm that it is connecting to the correct GitHub repository.
+
+9. Click on the "Resources" tab and in the search bar search for "postgres", select "Heroku Postgres" when it appears.
+Select "Hobby Dev - Free" and click "Provision", go to the "settings tab and click the button "Reveal Config Vars" in the
+config vars section to see that a config var "DATABASE_URL" has been set.
+
+10. Continuing in the cofig vars section set the below config vars.
+
+    | Key | Value |
+    |---|---|
+    | DATABASE_URL | `Database URL should have been set in the previous step` |
+    | DEBUG | FALSE |
+    | SECRET_KEY | `<Your Secret Key Here>` |
+    | STRIPE_PUBLISHABLE | `Your publishable stripe key` |
+    | STRIPE_SECRET | `Your secret Stripe Key` |
+    
+
+11. Go to the "Deploy" tab and scroll down to the "Manual Deploy" section check that the master branch is selected and 
+click "Deploy Branch".
+
+12. Go to the "Overview" tab, after a few minutes the top two logs should read "Deployed" and "Build Succeeded".
+
+13. Select the button "Open App" in the top right corner and wait for the home page to load.
+
