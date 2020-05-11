@@ -145,7 +145,7 @@ this page in the **footer** so anyone can get in touch from **anywhere** on the 
 viewable through the **admin panel** for the case of visitors who are **not logged in** asking questions and also to **reply** to questions 
 as there is a hidden **Answer** field. When a user asks a question their **ID** is also saved in a hidden `client` field which is allowed 
 to be **blank** when a none logged in visitor asks a question. The `client` field is then used to **display** questions and answers on the
-user's **profile page**.
+user's **profile page**, these questions can then be **edited** or **deleted** by the user.
 
 ### Stripe Payments
 
