@@ -8,20 +8,20 @@
 {% block content %}
 
 <div class="content">
-<h4>Delete:</h4>
+	<h4>Delete:</h4>
 	<p>{{ question.question }}</p>
 </div>
 <div class="content">
-	<form method="POST" action="{% url 'delete_question' slug=question.id %}">
-		{% csrf_token %}
-		<div class="row">
-			<div class="col">
-				<a href="{% url 'profile' %}"><button class="btn btn-secondary">Cancel</button></a>
-			</div>
-			<div class="col">
-				<button class="btn btn-danger" type="submit" name="Confirm">Confirm</button>
-			</div>
+	<div class="row">
+		<div class="col">
+			<a href="{% url 'profile' %}"><button class="btn btn-secondary">Cancel</button></a>
 		</div>
-	</form>
+		<div class="col">
+			<form method="POST" action="{% url 'delete_question' slug=question.id %}">
+				{% csrf_token %}
+				<button class="btn btn-danger" type="submit" name="Confirm">Confirm</button>
+			</form>
+		</div>
+	</div>
 </div>
 {% endblock %}
