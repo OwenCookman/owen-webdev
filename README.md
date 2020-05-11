@@ -111,6 +111,34 @@ The page displays all of my past projects and allows users to see what I have le
 Each image shows the home page of each project and links to the deployed website. Included is a link to each github repository
 and information about the projects.
 
+### User Authentication
+
+Visitors to the website can choose to register, this will allow them access to the contact.html page where they can fill out the
+order form and request a website to be built. They will also have access to their user profile where order requests are displayed
+along with invoices and any questions they have asked through the "Contact Me" page.
+
+## User Profile
+
+The user profile takes the user's email address and sends a query to the database to return the users information, It then takes
+the user's ID and makes a filter request to the database for any order, invoice and question objects where the client field is
+the same as the user's ID. These are then rendered on to the page through template rendering.
+
+## Order Page
+
+The order page uses the ContactForm model form which uses the order model, when the user fills out a valid form this data is saved
+to the database along with some unseen fields, these fields are client, date, price, pay_deposit, deposit_paid, pay_final and final_paid
+client is set with the value of the user who filled out the forms ID, the date uses auto_now_add=True to set the date and time to
+when the form was saved to the database. pay_deposit, deposit_paid, pay_final and final_paid are all Boolean fields set to False
+that are checked to manipulate data displayed on the user's profile as well as the invoices given when a payment is made. Finally
+price is a float field that defaults to 0.0, this field is there to be set when a price is settled, it is used to display the
+cost of the website on the user's profile as well as passed to stripe for payments.
+As the developer I would look at this data on the admin panel, assess how long the build would take and how complex it is 
+(possibly contacting the user for any more information), settle on a price with the user, update the price field and set the 
+pay_deposit field to True. This will then allow the user to pay the deposit through the orders section on their profile page
+which is half of the ammount set as the price.
+
+### Contact Me Page
+
 
 
 
