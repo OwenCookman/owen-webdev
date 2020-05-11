@@ -56,12 +56,15 @@ your way down the titles seeing that when one opens the open one closes
 - Move the slider in and out to see that the images, title, link and text change to be stacked on top of each other at 991px
 
 ### User Registration
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Register" and see the `register.html` page load
+- Enter an invalid email address and see a message that says "Please include an @ in the email address..."
+- Enter a valid email address and see a message that says "Please fill in this field." appear on username
+- Enter a Password that does not match the repeated password and see a message that says "passwords must match"
+- Enter a valid email, username and matching passwords and see that you are redirected to the `index.html` page and 
+the message "You have successfully registered" is showing at the top of the page
 
-### User Login
 
-### User Logout
-
-### Creating an Order 
 
 ### Editing an Order(Admin Panel)
 
