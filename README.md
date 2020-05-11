@@ -351,4 +351,4 @@ click "Deploy Branch".
 
 - My mentor [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/) for his brilliant tutelage
 
-- [Joke Heyndels](https://www.linkedin.com/in/joke-heyndels-8a8532167/) for her guidance in squashing bugs 
+- [Joke Heyndels](https://github.com/Wings30306) for her guidance in squashing bugs 
