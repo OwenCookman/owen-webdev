@@ -103,6 +103,14 @@ more about me they have been placed within collapses, allowing the user to show 
 An animated chevron has been added to give the user a que to open or close the collapses. This was animated through the use
 of CSS styles and jQuery. jQuery waits for the element to be clicked and toggles a class which provides the animation.  
 
+### Portfolio
+
+The Portfolio page was originally planned to be made dynamic which is why it is sat in its own app but due to time constraints
+it was not possible to implement this feature and this has been added to the "Possible Features To Implement" section.
+The page displays all of my past projects and allows users to see what I have learned and what I am capable of building.
+Each image shows the home page of each project and links to the deployed website. Included is a link to each github repository
+and information about the projects.
+
 
 
 
