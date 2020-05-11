@@ -82,19 +82,28 @@ The original Theme was taken from the Bootswatch themes library, the theme Sands
 customize it further such as the fonts used and the changes made to the navbar, The buttons provided were kept the same
 as the colours worked well with my palette but the font used in the button was changed to match the other text on the page.
 
-### navbar
-
 ### Index Page/Introduction
 
-### Portfolio
+The Index page serves as the main selling page of the website, it includes a Large call to action button so a user can get 
+straight to the steps needed to hire me as a developer. The button will link them direcly to the contact.html page which is
+a login required page. If the user is not logged in or registered they will be redirected to the login.html page which also 
+contains a clear link to the register.html page.
+Below the call to action button is a section of icons that show the foundation of what I can offer, clicking these icons will
+open up a modal from the modals.html file that contain more information about each area. The modals open through the use of 
+jQuery, each icon is given an ID that corresponds to its modal, jQuery waits for the icon to be clicked and runs the function
+to show the modal.
+The modals have been styled to appear opaque, as a lot of the features on the pages use opaque backgrounds that layer on top of
+each other I wanted to continue that theme here and used a different colour so that the modal still stood apart from the rest of
+the page. The text was coloured white so that anything that could be seen through the modal didn't draw the eye too much and distract
+from the text.
+On smaller devices this section is hidden and replaced with an accordion to make the page more compact so that the user can view
+each section piece by piece.
+As the About Me and What I Do sections are large areas of text and the user may only want to read them if they want to learn
+more about me they have been placed within collapses, allowing the user to show and hide each seperately.
+An animated chevron has been added to give the user a que to open or close the collapses. This was animated through the use
+of CSS styles and jQuery. jQuery waits for the element to be clicked and toggles a class which provides the animation.  
 
-### User Authentication
 
-### User Profile
-
-### Order Page
-
-### Contact Me Page
 
 
 ## Possible Features To Implement
