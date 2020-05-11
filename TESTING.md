@@ -64,6 +64,13 @@ your way down the titles seeing that when one opens the open one closes
 - Enter a valid email, username and matching passwords and see that you are redirected to the `index.html` page and 
 the message "You have successfully registered" is showing at the top of the page
 
+### User Login
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter an invalid username or password and see the message "Your username or Password is incorrect"
+- Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
+succesfully logged in" is showing at the top of the page
+
 
 
 ### Editing an Order(Admin Panel)
