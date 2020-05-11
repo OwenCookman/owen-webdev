@@ -45,8 +45,15 @@ your way down the titles seeing that when one opens the open one closes
 - Select the open title to see that all information is closed
 
 ### Portfolio Page
-
-
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Portfolio" and see the `portfolio.html` page load
+- See that the page is populated with an image accompanied by a title, GitHub repo link and some text
+- Click the images to see a new tab open that loads the deployed website for each project
+- Click the links titled "Github Repo" and see that a new tab opens with a link to the projects GitHub repositories
+- Right click on the page and select Inspect
+- Select toggle device toolbar or press Ctrl+shift+M
+- Set the device to responsive
+- Move the slider in and out to see that the images, title, link and text change to be stacked on top of each other at 991px
 
 ### User Registration
 
