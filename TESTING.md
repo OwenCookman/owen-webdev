@@ -211,3 +211,9 @@ the `index.html` page and the message "You have succesfully logged in" is showin
 
 
 ### Footer
+- Open the webpage in a new browser window
+- Scroll to the footer at the bottom of the page
+- Click the link labelled "here" in "If you have a project in mind or any other questions please get in touch here"
+- See that you are sent to the `question.html` page
+- Return to the home page and scroll to the footer at the bottom of the page
+- Click on the LinkedIn icon and see that a new tab is open that is loading to my LinkedIn profile
