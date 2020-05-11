@@ -194,5 +194,20 @@ of the page
 changes that you made
 
 ### Deleting a Question
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for a user who has asked a question and see that you are redirected to 
+the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+- Select the link in the navbar titled "Profile" or the link in the footer and see the `profile.html` page load
+- Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
+- Click the button labelled "Delete" and see that you are redirected to the `delete_question.html` page
+- See that the page displays the title "Are You Sure?" with the question you selected shown
+- Click the button labelled "Cancel" and see that you are redirected to the `profile.html` page
+- Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
+- Click the button labelled "Delete" and see that you are redirected to the `delete_question.html` page
+- See that the page displays the title "Are You Sure?" with the question you selected shown
+- Click the button labelled "Delete" and see that you are redirected to the `profile.html` page and the message 
+"Your question was deleted" is displayed at the top of the page
+
 
 ### Footer
