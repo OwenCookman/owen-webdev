@@ -130,12 +130,43 @@ if using this year in Expiry Year and Expiry Year: this year if the Expiry month
 - Open the "Your Orders" section and see that under "status" it says "Deposit paid, awaiting completion" if you paid the deposit
 or "Final payment made" if you paid the final payment
 
-
 ### Viewing an Invoice
+- After following the steps for Editing an Order
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for the user who created the order edited in Editing an Order and see that you are 
+redirected to the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+- Click on the link in the navbar titled "Profile" and see the `profile.html` page load
+- Click the section titled "Invoice History" see that the collapse opens to show links labelled with the business name of the
+order that was paid for in Paying a Deposit/Final Payment
+- Click the link to see that the `invoice.html` page load
+- See that the users details, the date of the invoice, a unique ID, the date work started, a description of what the payment was 
+for, the brand and last 4 digits of the card used to pay the ammount paid and the remaining cost are displayed
+- Right click on the page and select Inspect
+- Select toggle device toolbar or press Ctrl+shift+M
+- Set the device to responsive
+- Move the slider in and out to see that the details stack on top of each other at 575px
+- Click the button labelled "Print" and see a print preview of the page appear
+
 
 ### Asking a Question
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Contact Me" or the link in the footer and see the `question.html` page load
+- Click the button labelled "Send" and see the message "Please fill in this field" appear on the Name input
+- Fill in the Name field and press "Send", see that the message appears on the Email input
+- Fill in the Email field and press "Send", see that the message appears on the Message field
+- Fill in the form and press "Send", see that you are redirected to the `index.html` page with the message "Thank you for your 
+message, I will get back to you shortly" at the top of the page
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
+succesfully logged in" is showing at the top of the page
+- Select the link in the navbar titled "Contact Me" or the link in the footer and see the `question.html` page load
+- Fill in the form and press "Send", see that you are redirected to the `profile.html` page with the message "Thank you for your 
+message, I will get back to you shortly" at the top of the page
+- Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
 
 ### Replying to a Question(Admin Panel)
+
 
 ### Editing a Question
 
