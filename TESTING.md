@@ -71,6 +71,25 @@ the message "You have successfully registered" is showing at the top of the page
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
 succesfully logged in" is showing at the top of the page
 
+### User Logout
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
+succesfully logged in" is showing at the top of the page
+- Select the link in the navbar titled "Logout" and see that you are logged out and the message "You have been logged out 
+successfully" is showing at the top of the page
+
+### Creating an Order 
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
+succesfully logged in" is showing at the top of the page
+- Select the link in the navbar titles "Order" and see  the `contact.html` page load
+- Scroll to the bottom and click the button labelled "Send" and see that the page scrolls up with a cursor flashing in the 
+first required field
+- Fill in the required fields and click the button labelled "Send" and see the `profile.html` page load with the message
+"Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build" at the top 
+of the page 
 
 
 ### Editing an Order(Admin Panel)
