@@ -139,7 +139,25 @@ which is half of the ammount set as the price.
 
 ### Contact Me Page
 
+The contact me page is a simple form that takes the visitors name, email address and a message. This page is not restricted to 
+users who are logged in as I want anyone to be able to ask a qustion or get in touch for any other reason, there is a link to 
+this page in the footer so anyone can get in touch from anywhere on the website. The fields are saved to the database which are 
+viewable through the admin panel for the case of visitors who are not logged in asking questions and also to reply to questions 
+as there is a hidden Answer field. When a user asks a question their ID is also saved in a hidden client field which is allowed 
+to be blank when a none logged in visitor asks a question. The client field is then used to display questions and answers on the
+user's profile page.
 
+### Stripe Payments
+
+When a user has created an order and an agreement on price has been made the pay_deposit field in the order object will be set 
+to True. This will display the price and a pay deposit button in the "your orders" section of the user's profile. clicking the
+button will take the user through to a summary page which will show them a summary of what they are paying for as well as giving
+them the option to print the page. The print page button uses jQuery, when the button is clicked a window.print() is run as part
+of the click function. Clicking the "Make Payment" button will tke the user to the payment page where they can enter their card 
+details which are passed to the stripe API along with a variable "to_pay" which is set to half of the price value. If the payment
+was taken succesfully the deposit_paid field is set to True, the process is repeated again for pay_final. 
+
+## Invoices
 
 
 ## Possible Features To Implement
@@ -214,10 +232,6 @@ This was due to the stripe receipt url max length being set to 100
 the SQLite database would allow the url to be stored even though it
 was above 100 characters but the postgreSQL database used in
 deployment would not.
-
-
-
-
 
 
 ## Deployment
