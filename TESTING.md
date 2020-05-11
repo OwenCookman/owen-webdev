@@ -1,6 +1,6 @@
 # Testing
 
-The website was tested by [**Travis Continuous Integration**](https://travis-ci.org/) every time code was commited to GitHub
+The website was tested by [**Travis Continuous Integration**](https://travis-ci.org/) every time code was committed to GitHub
 
 
 ## Manual Testing
@@ -12,7 +12,7 @@ Manual testing was carried out on a Desktop computer
 - Move mouse over each option and see that the text changes to a bright white
 - Click the white link titles "Owen Cookman" and see that the page reloads
 - Click the link titled "Home" and see that the page reloads
-- Click the link titled "Porfolio" and see that the `Portfolio.html` page loads
+- Click the link titled "Portfolio" and see that the `Portfolio.html` page loads
 - Click the link titled "Contact Me" and see that the `question.html` page loads
 - Click the link titled "Login" and see that the `login.html` page loads
 - Click the link titled "Register" and see that the `register.html` page loads
@@ -69,13 +69,13 @@ the message "You have successfully registered" is showing at the top of the page
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter an invalid username or password and see the message "Your username or Password is incorrect"
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
-succesfully logged in" is showing at the top of the page
+successfully logged in" is showing at the top of the page
 
 ### User Logout
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
-succesfully logged in" is showing at the top of the page
+successfully logged in" is showing at the top of the page
 - Select the link in the navbar titled "Logout" and see that you are logged out and the message "You have been logged out 
 successfully" is showing at the top of the page
 
@@ -83,7 +83,7 @@ successfully" is showing at the top of the page
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
-succesfully logged in" is showing at the top of the page
+successfully logged in" is showing at the top of the page
 - Select the link in the navbar titles "Order" and see  the `contact.html` page load
 - Scroll to the bottom and click the button labelled "Send" and see that the page scrolls up with a cursor flashing in the 
 first required field
@@ -96,7 +96,7 @@ of the page
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for a Super User and see that you are redirected to the `index.html` page and the message 
-"You have succesfully logged in" is showing at the top of the page
+"You have successfully logged in" is showing at the top of the page
 - Add to the end of the URL /admin and press enter, see that the Admin panel has loaded
 - Select the link under the COMMS heading titled "orders"
 - See that a link for a previously made order is loaded on to the page with the title of the business' name
@@ -109,7 +109,7 @@ of the page
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for the user who created the order edited in Editing an Order and see that you are 
-redirected to the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+redirected to the `index.html` page and the message "You have successfully logged in" is showing at the top of the page
 - Click on the link in the navbar titled "Profile" and see the `profile.html` page load
 - Click the "Your Orders" section and see the collapse open up to display the order details
 - Right click on the page and select Inspect
@@ -135,7 +135,7 @@ or "Final payment made" if you paid the final payment
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for the user who created the order edited in Editing an Order and see that you are 
-redirected to the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+redirected to the `index.html` page and the message "You have successfully logged in" is showing at the top of the page
 - Click on the link in the navbar titled "Profile" and see the `profile.html` page load
 - Click the section titled "Invoice History" see that the collapse opens to show links labelled with the business name of the
 order that was paid for in Paying a Deposit/Final Payment
@@ -159,7 +159,7 @@ for, the brand and last 4 digits of the card used to pay the ammount paid and th
 message, I will get back to you shortly" at the top of the page
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
-succesfully logged in" is showing at the top of the page
+successfully logged in" is showing at the top of the page
 - Select the link in the navbar titled "Contact Me" or the link in the footer and see the `question.html` page load
 - Fill in the form and press "Send", see that you are redirected to the `profile.html` page with the message "Thank you for your 
 message, I will get back to you shortly" at the top of the page
@@ -169,7 +169,7 @@ message, I will get back to you shortly" at the top of the page
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for a Super User and see that you are redirected to the `index.html` page and the message 
-"You have succesfully logged in" is showing at the top of the page
+"You have successfully logged in" is showing at the top of the page
 - Add to the end of the URL /admin and press enter, see that the Admin panel has loaded
 - Select the link labelled "questions" under the section titled "COMMS" and see that a list of links labelled with different 
 Names is displayed
@@ -182,7 +182,7 @@ where X is the name
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for a user who has asked a question and see that you are redirected to 
-the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+the `index.html` page and the message "You have successfully logged in" is showing at the top of the page
 - Select the link in the navbar titled "Profile" or the link in the footer and see the `profile.html` page load
 - Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
 - Click the button labelled "Edit" and see that the `question.html` page loads with the fields filled in with the
@@ -197,7 +197,7 @@ changes that you made
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter a valid username and password for a user who has asked a question and see that you are redirected to 
-the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+the `index.html` page and the message "You have successfully logged in" is showing at the top of the page
 - Select the link in the navbar titled "Profile" or the link in the footer and see the `profile.html` page load
 - Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
 - Click the button labelled "Delete" and see that you are redirected to the `delete_question.html` page
