@@ -27,9 +27,26 @@ Manual testing was carried out on a Desktop computer
 
 
 ### Index Page
- 
+- Open the webpage in a new browser window
+- Scroll down to the large button labelled "Hire Me!", click it and see that the Login page is loaded if you are not 
+logged in or the `contact.html` page is loaded
+- Return to the `index page` and scroll to the orange icons, see that clicking each icon opens a modal with information
+about each title given to its corresponding icon, clicking the cross or outside of the modal closes it
+- Scroll down to the "About Me" section and click "About Me", see that a collapse now opens containing text and the downward
+pointing chevron has rotated to point up
+- Click "About Me" again and see that the collapse closes and the upward facing chevron rotates to face downwards
+- Right click on the page and select Inspect
+- Select toggle device toolbar or press Ctrl+shift+M
+- Set the device to responsive
+- Move the slider in and out to see that the orange icons stack two by two at 767px and are replaced byan accordion with 
+the headings of the icons at 575px
+- Selecting the title "Targeted Design" see that the "Taylored Website" information closes and "Targeted Design" opens, work
+your way down the titles seeing that when one opens the open one closes
+- Select the open title to see that all information is closed
 
 ### Portfolio Page
+
+
 
 ### User Registration
 
