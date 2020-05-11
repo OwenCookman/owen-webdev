@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Inria+Sans&display=swap');
 
+/* General/Universal */
 html {
     scroll-behavior: smooth;
     background-color: #041e38;
@@ -34,37 +35,8 @@ body {
     }
 }
 
-footer {
-    background-color: #041e38;
-    color: #fafafa;
-}
-
-.sandstone, .navbar .nav-link, 
-.btn, .nav-tabs .nav-link, 
-.nav-pills .nav-link, 
-.breadcrumb, .pagination, 
-.dropdown-menu .dropdown-item, 
-.tooltip {
-    font-size: 1rem;
-    line-height: 22px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
 img {
     max-width: 300px;
-}
-
-.hire-me-btn {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 2rem;
-}
-
-.footer-note {
-    font-size: 0.5rem;
 }
 
 .title {
@@ -77,118 +49,6 @@ img {
     font-family: 'Inria Sans', sans-serif;
     color: #3E3F3A;
     margin: 15px;
-}
-
-.bg-primary {
-    background-color: #041e38!important;
-}
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.intro-icon {
-    display: block;
-    font-size: 6rem;
-    cursor: pointer;
-    color: #e98706;
-}
-
-    .hidden {
-        display: none;
-    }
-
-@media (max-width: 575px) {
-    .hide-mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 575px) {
-    .show-mobile {
-        display: block;
-    }
-}
-
-@media (max-width: 991px) {
-    .hide-tablet {
-        display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .show-tablet {
-        display: block;
-    }
-}
-
-#id_website_1 {
-    display: none;
-}
-
-/* messages */
-
-ul {
-    list-style-type: none;
-}
-
-/* forms */
-
-#id_name, #div_id_email, 
-#id_business_name, #id_url,
-#id_credit_card_number,
-#id_username, #id_password,
-#id_password1, #id_password2 {
-    max-width: 15rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#id_functionality, #id_business_type,
-#id_customer, #id_message, #id_question {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#id_CVV, #id_expiry_month,
-#id_expiry_year {
-    max-width: 5rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* messages */
-
-.messages div {
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 15px;
-}
-
-.success {
-    background-color: #93c54b78;
-}
-
-.warning {
-   background-color: #ff000085;
-}
-
-.error {
-    background-color: 
-}
-
-.rotate1, .rotate2 {
-    -moz-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
-
-.rotate1.down, .rotate2.down {
-    -ms-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
 }
 
 .align-left {
@@ -205,11 +65,78 @@ ul {
     }
 }
 
+/* Navbar */
+
+.sandstone, .navbar .nav-link, 
+.btn, .nav-tabs .nav-link, 
+.nav-pills .nav-link, 
+.breadcrumb, .pagination, 
+.dropdown-menu .dropdown-item, 
+.tooltip {
+    font-size: 1rem;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.bg-primary {
+    background-color: #041e38!important;
+}
+
+/* Index */
+
+.hire-me-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+
+.intro-icon {
+    display: block;
+    font-size: 6rem;
+    cursor: pointer;
+    color: #e98706;
+}
+
+/* Footer */
+
+footer {
+    background-color: #041e38;
+    color: #fafafa;
+}
+
+.footer-note {
+    font-size: 0.5rem;
+}
+
+/* Messages */
+
+.messages div {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.success {
+    background-color: #93c54b78;
+}
+
+.warning {
+   background-color: #ff000085;
+}
+
+.error {
+    background-color: #ff000056;
+}
+
+/* Modals */
+
 .modal-title {
     text-align: center;
     color: #fafafa;
 }
-
 
 .modal-header {
     display: -webkit-box;
@@ -253,4 +180,78 @@ ul {
     flex: 1 1 auto;
     padding: 1rem;
     font-size: 1.3rem;
+}
+
+/* Forms */
+
+#id_name, #div_id_email, 
+#id_business_name, #id_url,
+#id_credit_card_number,
+#id_username, #id_password,
+#id_password1, #id_password2 {
+    max-width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#id_functionality, #id_business_type,
+#id_customer, #id_message, #id_question {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#id_CVV, #id_expiry_month,
+#id_expiry_year {
+    max-width: 5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#id_website_1 {
+    display: none;
+}
+
+/* Animation */
+
+.rotate1, .rotate2 {
+    -moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.rotate1.down, .rotate2.down {
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/* Hide/Show elements */
+
+.hidden {
+        display: none;
+    }
+
+@media (max-width: 575px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .show-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .show-tablet {
+        display: block;
+    }
 }
