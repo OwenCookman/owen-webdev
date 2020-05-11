@@ -178,9 +178,20 @@ Names is displayed
 - Select the button labelled "Save" and see the page of Names load with the message "The question “X” was changed successfully." 
 where X is the name
 
-
 ### Editing a Question
-
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for a user who has asked a question and see that you are redirected to 
+the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+- Select the link in the navbar titled "Profile" or the link in the footer and see the `profile.html` page load
+- Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
+- Click the button labelled "Edit" and see that the `question.html` page loads with the fields filled in with the
+details of the question
+- Make the changes you would like to make and click "Send"
+- see that you are redirected to the `profile.html` page with the message "Question edited successfully" displaying at the top
+of the page
+- Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked shown with the 
+changes that you made
 
 ### Deleting a Question
 
