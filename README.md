@@ -50,10 +50,10 @@ As the Developer I expect:
 #### Colours
 I wanted to aim for a **neutral** colour palette with this website as my clients could be looking to build websites with 
 a whole range of **themes**. This led me to look at neutral colour **groups**. I settled on a dark navy blue for the **nav** and 
-**footer** elements, this would **seperate** them from other sections of the page. I decided to keep the page **background** as **white**
-while content would appear on an **opaque field**. This allowed content to be **stacked** within itself making the field around 
-the inner content **darker** which would seperate **generated** content even though they are generated in the same container
-for example when a user asks multiple questions.
+**footer** elements, this would **seperate** them from other sections of the page.
+ I decided to keep the page **background** as **white**while content would appear on an **opaque field**. This allowed content 
+ to be **stacked** within itself making the field around the inner content **darker** which would seperate **generated** content 
+ even though they are generated in the same container for example when a user asks multiple questions.
 
 #### Fonts
 I decided to go with the [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) font as it still looked **professional** and neat but also **different** from what is seen
@@ -63,7 +63,7 @@ the page looking **interesting**.
 
 #### Favicon
 The favicon was taken from [**PNG Fuel**](https://www.pngfuel.com/free-png/fdyur) I was looking for a **simple** icon that
-would explaine exactly what the website **involves**, the **laptop** with the </> symbol for **code** was perfect in showing that I 
+would explain exactly what the website **involves**, the **laptop** with the </> symbol for **code** was perfect in showing that I 
 am a **developer**. 
 
 ### Wireframes 
@@ -72,7 +72,7 @@ Please click [here](wireframes) to view my first draft Wireframes, these were or
 
 #### Changes
 The **'About Me'** page and **'What I do'** page were later combined on to the **index** page as this would be the landing point where
-this information could be displayed to **sell** myself as a **developer** rather than having two small seperate pages.
+this information could be displayed to **sell** myself as a **developer** rather than having two small separate pages.
 
 ## Features
 
@@ -85,21 +85,26 @@ as the colours worked well with my **palette** but the **font** used in the **bu
 ### Index Page/Introduction
 
 The **Index** page serves as the main **selling** page of the website, it includes a Large **call to action** button so a **user** can get 
-straight to the steps needed to **hire me** as a **developer**. The button will **link** them direcly to the `contact.html` page which is
+straight to the steps needed to **hire me** as a **developer**. The button will **link** them directly to the `contact.html` page which is
 a **login required** page. If the user is not logged in or registered they will be **redirected** to the `login.html` page which also 
 contains a clear **link** to the `register.html` page.
+
 Below the call to action button is a section of **icons** that show the **foundation** of what I can offer, clicking these icons will
 open up a **modal** from the `modals.html` file that contain more **information** about each area. The **modals** open through the use of 
 **jQuery**, each **icon** is given an **ID** that corresponds to its **modal**, **jQuery** waits for the icon to be **clicked** and runs the **function**
 to **show** the **modal**.
+
 The **modals** have been styled to appear **opaque**, as a lot of the features on the pages use opaque **backgrounds** that **layer** on top of
 each other I wanted to continue that **theme** here and used a different colour so that the modal still **stood apart** from the rest of
 the page. The text was coloured **white** so that anything that could be seen through the modal didn't draw the eye too much and **distract**
 from the text.
+
 On **smaller devices** this section is **hidden** and **replaced** with an **accordion** to make the page more **compact** so that the user can view
 each section piece by piece.
+
 As the **About Me** and **What I Do** sections are large areas of text and the user may only want to read them if they want to learn
-more about me they have been placed within **collapses**, allowing the user to **show** and **hide** each seperately.
+more about me they have been placed within **collapses**, allowing the user to **show** and **hide** each separately.
+
 An **animated** chevron has been added to give the user a que to **open** or **close** the **collapses**. This was animated through the use
 of **CSS** styles and **jQuery**. jQuery waits for the element to be **clicked** and **toggles** a **class** which provides the animation.  
 
@@ -128,14 +133,17 @@ the same as the user's **ID**. These are then **rendered** on to the page throug
 The **order page** uses the `ContactForm` model form which uses the `order` model, when the user fills out a **valid** form this **data** is saved
 to the **database** along with some **unseen** fields, these fields are `client`, `date`, `price`, `pay_deposit`, `deposit_paid`, `pay_final` and `final_paid`
 **client** is set with the value of the user's `ID`, the `date` uses `auto_now_add=True` to set the date and time to
-when the form was saved to the **database**. `pay_deposit`, `deposit_paid`, `pay_final` and `final_paid` are all **Boolean** fields set to `False`
+when the form was saved to the **database**. 
+
+`pay_deposit`, `deposit_paid`, `pay_final` and `final_paid` are all **Boolean** fields set to `False`
 that are checked to **manipulate** data **displayed** on the **user's profile** as well as the **invoices** given when a **payment** is made. Finally
 `price` is a **float field** that **defaults** to 0.0, this field is there to be **set** when a **price** is settled, it is used to display the
 **cost** of the website on the **user's profile** as well as passed to **Stripe** for **payments**.
+
 As the **developer** I would look at this **data** on the **admin panel**, assess how long the build would take and how **complex** it is 
 (possibly contacting the user for any more information), settle on a price with the user, **update** the `price` field and set the 
 `pay_deposit` field to `True`. This will then allow the user to **pay** the deposit through the **orders** section on their **profile** page
-which is **half** of the ammount **set** as the **price**.
+which is **half** of the amount **set** as the **price**.
 
 ### Contact Me Page
 
@@ -155,7 +163,7 @@ button will take the user through to a **summary** page which will show them a s
 them the option to **print** the page. The print page button uses **jQuery**, when the button is clicked a `window.print()` is run as part
 of the click **function**. Clicking the **"Make Payment"** button will tke the user to the **payment** page where they can enter their card 
 details which are passed to **Stripe** along with a **variable** `to_pay` which is set to **half** of the `price` value. If the payment
-was taken **succesfully** the `deposit_paid` field is set to `True`, the process is repeated again for `pay_final`. 
+was taken **successfully** the `deposit_paid` field is set to `True`, the process is repeated again for `pay_final`. 
 
 ## Invoices
 
@@ -174,8 +182,8 @@ the page can be reached from **anywhere** on the website. It also incudes a **"s
 ## Possible Features To Implement
 - A more detailed contact form using check boxes that could give an estimated cost of the website build to the client
 - A built in chat system allowing text communication to be handled completely on the website for example the chat system used
-by Tutor support at ci
-- The content on the portfolio page to be rendered from the database, with new entries uploaded from the admin pannel
+by Tutor support at CI
+- The content on the portfolio page to be rendered from the database, with new entries uploaded from the admin panel
 - Email notifications when visitors/users ask a question and invoices/confirmations sent to users email
 
 ## Technologies Used
@@ -226,7 +234,7 @@ starting migrations fresh.
 
 **Bug 3**
 
-While deploying the project I recieved an error that the 
+While deploying the project I received an error that the 
 database is not configured correctly.
 
 To fix this problem a file called runtime.txt was created in 
@@ -278,7 +286,7 @@ or Download" button at the top of the page and select "Download Zip" to extract 
 `pip -r requirements.txt`
 
 7. inside the root directory create a file named env.py, at the top of the document type `import os` 
-and add the environemt variables shown in the heroku deployment with the following syntax:
+and add the environment variables shown in the heroku deployment with the following syntax:
 
 `os.environ.setdefault("SECRET_KEY", "add your secret key here")`
 
@@ -337,3 +345,10 @@ click "Deploy Branch".
 
 13. Select the button "Open App" in the top right corner and wait for the home page to load.
 
+## Acknowledgements
+
+- My family and friends for testing this project and reporting back to me with any issues.
+
+- My mentor [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/) for his brilliant tutelage
+
+- [Joke Heyndels](https://www.linkedin.com/in/joke-heyndels-8a8532167/) for her guidance in squashing bugs 
