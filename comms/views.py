@@ -63,6 +63,8 @@ def delete_question(request, slug):
 
     if request.method == "POST":
         this_question.delete()
+        messages.success(
+            request, "Your question was deleted")
         return redirect('profile')
 
     return render(request, 'delete_question.html', {"question": this_question})
