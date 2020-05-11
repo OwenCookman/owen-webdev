@@ -91,10 +91,45 @@ first required field
 "Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build" at the top 
 of the page 
 
-
 ### Editing an Order(Admin Panel)
+- After following the steps for Creating an Order
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for a Super User and see that you are redirected to the `index.html` page and the message 
+"You have succesfully logged in" is showing at the top of the page
+- Add to the end of the URL /admin and press enter, see that the Admin panel has loaded
+- Select the link under the COMMS heading titled "orders"
+- See that a link for a previously made order is loaded on to the page with the title of the business' name
+- Select the order link and see that the details of the order are loaded on to the page
+- Set a value to the "price" field and check the box for "Pay deposit"
+- Click save and see the order page load with the message "The order X was changed successfully" where X is the name of the order
 
 ### Paying a Deposit/Final Payment
+- After following the steps for Editing an Order
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for the user who created the order edited in Editing an Order and see that you are 
+redirected to the `index.html` page and the message "You have succesfully logged in" is showing at the top of the page
+- Click on the link in the navbar titled "Profile" and see the `profile.html` page load
+- Click the "Your Orders" section and see the collapse open up to display the order details
+- Right click on the page and select Inspect
+- Select toggle device toolbar or press Ctrl+shift+M
+- Set the device to responsive
+- Move the slider in and out to see that the details stack two by two at 991px and vertically at 575px
+- See that the price that was set is displayed under the heading "Total Cost" and there is a button labelled "Pay Deposit" or 
+"Pay Final" under the heading "status"
+- Click the "pay Deposit" button and see the `summary.html` page load
+- See the order details rendered on the page and the sum under the heading "Total to Pay" is half of the value under the heading
+"Total Cost"
+- Click the button labelled "Print" and see a print preview of the page appear
+- Close the print preview and click the button labelled "Make Payment". See the `payment.html` page load
+- Enter invalid card details and see that a message appears stating that the details are invalid
+- Enter the test card details Credit Card Number: 4242424242424242, CVV: any 3 digits, Expiry Month: any Month that hasn't passed
+if using this year in Expiry Year and Expiry Year: this year if the Expiry month hasn't passed or any future year
+- See that the `profile.html` page loads with the message "Payment taken successfully" is shown at the top
+- Open the "Your Orders" section and see that under "status" it says "Deposit paid, awaiting completion" if you paid the deposit
+or "Final payment made" if you paid the final payment
+
 
 ### Viewing an Invoice
 
