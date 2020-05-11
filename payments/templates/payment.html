@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block head_js %}
+<!-- Stripe JS -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
 	//<![CDATA[
@@ -13,10 +14,14 @@
 {% endblock %}
 
 {% block page_title %}Make a Payment{% endblock %}
+
 {% block content %}
+<!-- Amount to be paid -->
 <div class="content">
 	<p>Your total for this payment is £{{ to_pay|floatformat:2 }}</p>
 </div>
+
+<!-- Payment form -->
 <div class="content">
 	<form role="form" method="post" id="payment-form">
 		<legend>Payment Details</legend>

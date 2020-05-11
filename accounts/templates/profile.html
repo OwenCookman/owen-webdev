@@ -8,6 +8,8 @@
 {% block content %}
 <p>{{ profile.email }}</p>
 
+<!-- Orders Section -->
+<!-- order collapse -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -15,58 +17,68 @@
     Your Orders
   </button>
 			<div class="collapse" id="orderCollapse">
-				<div class="">
-					<div class="content">
-						{% if orders %}
-						{% for order in orders %}
-						<div class="row">
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<h4 class="subtitle">Name</h4>
-								<p>{{ order.business_name }}</p>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<h4 class="subtitle">Requested</h4>
-								<p>{{ order.date }}</p>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<h4 class="subtitle">Total Cost</h4>
-								{% if order.price == 0 %}
-								<p>Awaiting confirmation</p>
-								{% else %}
-								<p>£{{ order.price|floatformat:2 }}</p>
-								{% endif %}
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<h4 class="subtitle">Status</h4>
-								{% if order.pay_deposit is False %}
-								<p>Awaiting confirmation</p>
-								{% elif order.pay_deposit is True and order.deposit_paid is False %}
-								<form action="{% url 'summary' slug=order.id %}">
-									<input class="btn btn-primary" type="submit" value="Pay Deposit"></form>
-									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
-									<p>Deposit paid, awaiting completion</p>
-									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
+				<!-- Order Content -->
+				<div class="content">
 
-									<form action="{% url 'summary' slug=order.id %}">
-										<input class="btn btn-primary" type="submit" value="Pay Final"></form>
-										{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
-										<p>Final payment made</p>
-										{% endif %}
-							</div>
+					{% if orders %}
+					{% for order in orders %}
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<h4 class="subtitle">Name</h4>
+							<p>{{ order.business_name }}</p>
 						</div>
-						<hr>
-						{% endfor %}
-						{% else %}
-						<p>There are currently no orders in your profile, to make an order please fill out the order
-							form <a href="{% url 'contact' %}">here.</a></p>
-						{% endif %}
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<h4 class="subtitle">Requested</h4>
+							<p>{{ order.date }}</p>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<h4 class="subtitle">Total Cost</h4>
+
+							{% if order.price == 0 %}
+							<p>Awaiting confirmation</p>
+
+							{% else %}
+							<p>£{{ order.price|floatformat:2 }}</p>
+
+							{% endif %}
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<h4 class="subtitle">Status</h4>
+
+							{% if order.pay_deposit is False %}
+							<p>Awaiting confirmation</p>
+
+							{% elif order.pay_deposit is True and order.deposit_paid is False %}
+							<form action="{% url 'summary' slug=order.id %}">
+								<input class="btn btn-primary" type="submit" value="Pay Deposit"></form>
+
+								{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is False %}
+								<p>Deposit paid, awaiting completion</p>
+
+								{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is False %}
+								<form action="{% url 'summary' slug=order.id %}">
+									<input class="btn btn-primary" type="submit" value="Pay Final"></form>
+
+									{% elif order.pay_deposit is True and order.deposit_paid is True and order.pay_final is True and order.final_paid is True %}
+									<p>Final payment made</p>
+									{% endif %}
+						</div>
 					</div>
+					<hr>
+					{% endfor %}
+
+					{% else %}
+					<!-- No orders to display -->
+					<p>There are currently no orders in your profile, to make an order please fill out the order
+						form <a href="{% url 'contact' %}">here.</a></p>
+					{% endif %}
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
+<!-- Invoice Section -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -74,29 +86,30 @@
     Invoice History
   </button>
 			<div class="collapse" id="invoiceCollapse">
-				<div class="">
 
-					{% if invoices %}
-					{% for invoice in invoices %}
-					<div class="content">
-						<div class="row">
-							<div class="col">
-								<h3><a class="title"
-										href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a></h3>
-							</div>
+				<!-- Invoice Content -->
+				{% if invoices %}
+				{% for invoice in invoices %}
+				<div class="content">
+					<div class="row">
+						<div class="col">
+							<h3><a class="title"
+									href="{% url 'invoice' slug=invoice.id %}">{{ invoice.business_name }}</a></h3>
 						</div>
 					</div>
-					{% endfor %}
-					{% else %}
-					<p>There are currently no invoices to display.</p>
-					{% endif %}
-
 				</div>
+				{% endfor %}
+
+				{% else %}
+				<!-- No invoices to display -->
+				<p>There are currently no invoices to display.</p>
+				{% endif %}
 			</div>
 		</div>
 	</div>
 </div>
 
+<!-- Questions Section -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -104,38 +117,38 @@
     Your Questions
   </button>
 			<div class="collapse" id="questionCollapse">
-				<div class="">
+
+				<!-- Questions Content -->
+				<div class="content">
+					{% if questions %}
+					{% for question in questions %}
 					<div class="content">
-						{% if questions %}
-						{% for question in questions %}
-						<div class="content">
-							<div class="row">
-								<div class="col">
-									<p>Your question: {{ question.question }}</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<p>Answer: {{ question.Answer }}</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<a class="btn btn-secondary"
-										href="{% url 'edit_question' slug=question.id %}">Edit</a>
-								</div>
-								<div class="col">
-									<a class="btn btn-danger"
-										href="{% url 'delete_question' slug=question.id %}">Delete</a>
-								</div>
+						<div class="row">
+							<div class="col">
+								<p>Your question: {{ question.question }}</p>
 							</div>
 						</div>
-						{% endfor %}
-						{% else %}
-						<p>No questions to display, if you have a question please click <a
-								href="{% url 'question' %}">here.</a></p>
-						{% endif %}
+						<div class="row">
+							<div class="col">
+								<p>Answer: {{ question.Answer }}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<a class="btn btn-secondary" href="{% url 'edit_question' slug=question.id %}">Edit</a>
+							</div>
+							<div class="col">
+								<a class="btn btn-danger" href="{% url 'delete_question' slug=question.id %}">Delete</a>
+							</div>
+						</div>
 					</div>
+					{% endfor %}
+
+					{% else %}
+					<!-- No questions to display -->
+					<p>No questions to display, if you have a question please click <a
+							href="{% url 'question' %}">here.</a></p>
+					{% endif %}
 				</div>
 			</div>
 		</div>

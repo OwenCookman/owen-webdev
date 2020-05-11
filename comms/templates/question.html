@@ -7,10 +7,13 @@
 {% block page_heading %}<h1 class="title">Contact Me</h1>{% endblock %}
 
 {% block content %}
+<!-- Question introduction -->
 <div class="content">
 	<p>Please fill out the below form to leave me a message about a project that you would like to work on or to ask
 		any questions that you might have.</p>
 </div>
+
+<!-- Question form -->
 <div class="content">
 	{% csrf_token %}
 	<form action="" method="POST">

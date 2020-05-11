@@ -6,6 +6,7 @@
 {% block page_heading %}<h1 class="title">Invoice for {{this_invoice.business_name}}</h1>{% endblock %}
 
 {% block content %}
+<!-- The user's details and business name -->
 <div class="content">
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 align-left">
@@ -13,6 +14,8 @@
 			<p>{{ user.email }}</p>
 			<p>{{ user.username }}</p>
 		</div>
+
+		<!-- Dates and invoice ID -->
 		<div class="col-lg-6 col-md-6 col-sm-12 align-right">
 			<p>Date of invoice: {{ this_invoice.invoice_date }}</p>
 			<p>Invoice ID: {{ this_invoice.id }}</p>
@@ -20,6 +23,7 @@
 		</div>
 	</div>
 
+	<!-- Invoice details -->
 </div>
 <div class="content hide-mobile">
 	<div class="row">
@@ -51,6 +55,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- Information for mobile sized screens -->
 <div class="content show-mobile hidden">
 	<div class="row">
@@ -90,6 +95,8 @@
 	</div>
 	<hr>
 </div>
+
+<!-- Stripe Receipt -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -98,6 +105,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- Print button -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -105,6 +114,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- My details -->
 <div class="content">
 	<div class="row">
 		<div class="col">
@@ -114,5 +125,4 @@ Ozzycookman@hotmail.com<br>
 		</div>
 	</div>
 </div>
-
 {% endblock %}

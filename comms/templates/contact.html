@@ -7,6 +7,7 @@
 {% block page_heading %}<h1 class="title">Order</h1>{% endblock %}
 
 {% block content %}
+<!-- Contact introduction -->
 <div class="content">
 	<p>Please fill out the below form to let me know what kind of website you would like building.</p>
 	<p>Give as much information as possible on your business and the people who you provide services to where possible.
@@ -19,6 +20,8 @@
 		remaining cost will need to
 		be paid.</p>
 </div>
+
+<!-- Contact form -->
 <div class="content">
 	<p>Fields marked * are required</p>
 	<form action="{% url 'contact' %}" method="POST">

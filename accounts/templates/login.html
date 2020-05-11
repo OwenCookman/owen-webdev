@@ -7,9 +7,12 @@
 {% block page_heading %}<h1 class="title">Login</h1>{% endblock %}
 
 {% block content %}
+<!-- redirect to register.html -->
 <div class="content">
 	<p>If you need to make an account please <a href="{% url 'registration' %}">Register</a> here</p>
 </div>
+
+<!-- Login form -->
 <div class="content">
 	<form method="POST">
 		{% csrf_token %}
