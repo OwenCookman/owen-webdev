@@ -12,6 +12,7 @@ MY_EMAIL = os.environ.get('MY_EMAIL')
 
 
 def create_question(request):
+    """ Returns the question.html page and allows the creation of new questions """
     if request.method == "POST":
         question_form = QuestionForm(request.POST)
 
@@ -41,6 +42,7 @@ def create_question(request):
 
 
 def edit_question(request, slug):
+    """ Returns the question.html page with the form details filled in ready to be editied """
     form_data = question.objects.get(id=slug)
     question_form = QuestionForm(instance=form_data)
 
@@ -59,6 +61,7 @@ def edit_question(request, slug):
 
 
 def delete_question(request, slug):
+    """ returns the delete_question.html page and allows for the deletion of questions """
     this_question = question.objects.get(id=slug)
 
     if request.method == "POST":
@@ -72,6 +75,7 @@ def delete_question(request, slug):
 
 @login_required
 def contact(request):
+    """ Returns the contact.html page where users can create new orders """
     if request.method == "POST":
         contact_form = ContactForm(request.POST)
 
@@ -81,13 +85,6 @@ def contact(request):
             contact.save()
             messages.success(
                 request, "Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build")
-            #message = "A user has created an order"
-            #subject = "order"
-            #from_email = request.user.email
-
-            #email = EmailMessage(subject, message, from_email, to=['MY_EMAIL'])
-            # email.send()
-
             return redirect('profile')
 
         else:

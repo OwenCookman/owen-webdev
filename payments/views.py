@@ -14,6 +14,7 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def user_invoice(request, slug):
+    """ Returns the invoice.html page to render a specific invoice """
     user = User.objects.get(email=request.user.email)
     this_invoice = invoice.objects.get(id=slug)
     context = {'user': user, 'this_invoice': this_invoice}
@@ -22,6 +23,7 @@ def user_invoice(request, slug):
 
 @login_required()
 def summary(request, slug):
+    """ Returns the summary.html page to render the details of a specific payment """
     this_order = order.objects.get(id=slug)
     to_pay = this_order.price / 2
     context = {'this_order': this_order, "to_pay": to_pay}
@@ -30,6 +32,7 @@ def summary(request, slug):
 
 @login_required()
 def payment(request, slug):
+    """ Returns the payment.html page where users can make card payments and generate an invoice """
     this_order = order.objects.get(id=slug)
     to_pay = this_order.price / 2
 

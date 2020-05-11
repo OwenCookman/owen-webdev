@@ -5,5 +5,5 @@ from django.contrib.auth.decorators import login_required
 
 
 def portfolio(request):
-    """Returns the portfolio.html file"""
+    """ Returns the portfolio.html file """
     return render(request, 'portfolio.html')

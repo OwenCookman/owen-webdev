@@ -10,20 +10,20 @@ from payments.models import invoice
 
 
 def index(request):
-    """Returns the index.html file"""
+    """ Returns the index.html page """
     return render(request, 'index.html')
 
 
 @login_required
 def logout(request):
-    """Logs the user out if they are logged in"""
+    """ Logs the user out if they are logged in """
     auth.logout(request)
     messages.success(request, "You have been logged out successfully")
     return redirect(reverse('index'))
 
 
 def login(request):
-    """Returns a login page"""
+    """ Returns the login.html page and allows a user to log in """
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == "POST":
@@ -46,7 +46,7 @@ def login(request):
 
 
 def registration(request):
-    """Returns the registration page"""
+    """ Returns the registration.html page and registers new users """
     if request.user.is_authenticated:
         return redirect(reverse('index'))
 
@@ -73,7 +73,7 @@ def registration(request):
 
 @login_required
 def user_profile(request):
-    """The user's profile page where the user's orders are displayed"""
+    """ The user's profile page where the user's orders, invoices and questions are displayed """
     user = User.objects.get(email=request.user.email)
     orders = order.objects.filter(client=request.user.id)
     invoices = invoice.objects.filter(client=request.user.id)
