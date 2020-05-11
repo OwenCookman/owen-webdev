@@ -78,86 +78,97 @@ this information could be displayed to **sell** myself as a **developer** rather
 
 ### Theme
 
-The original Theme was taken from the Bootswatch themes library, the theme Sandstone was used and then styled with CSS to 
-customize it further such as the fonts used and the changes made to the navbar, The buttons provided were kept the same
-as the colours worked well with my palette but the font used in the button was changed to match the other text on the page.
+The original **Theme** was taken from the **Bootswatch** themes library, the theme **Sandstone** was used and then styled with **CSS** to 
+**customize** it further such as the **fonts** used and the changes made to the **navbar**, The **buttons** provided were kept the same
+as the colours worked well with my **palette** but the **font** used in the **button** was **changed** to match the other text on the page.
 
 ### Index Page/Introduction
 
-The Index page serves as the main selling page of the website, it includes a Large call to action button so a user can get 
-straight to the steps needed to hire me as a developer. The button will link them direcly to the contact.html page which is
-a login required page. If the user is not logged in or registered they will be redirected to the login.html page which also 
-contains a clear link to the register.html page.
-Below the call to action button is a section of icons that show the foundation of what I can offer, clicking these icons will
-open up a modal from the modals.html file that contain more information about each area. The modals open through the use of 
-jQuery, each icon is given an ID that corresponds to its modal, jQuery waits for the icon to be clicked and runs the function
-to show the modal.
-The modals have been styled to appear opaque, as a lot of the features on the pages use opaque backgrounds that layer on top of
-each other I wanted to continue that theme here and used a different colour so that the modal still stood apart from the rest of
-the page. The text was coloured white so that anything that could be seen through the modal didn't draw the eye too much and distract
+The **Index** page serves as the main **selling** page of the website, it includes a Large **call to action** button so a **user** can get 
+straight to the steps needed to **hire me** as a **developer**. The button will **link** them direcly to the `contact.html` page which is
+a **login required** page. If the user is not logged in or registered they will be **redirected** to the `login.html` page which also 
+contains a clear **link** to the `register.html` page.
+Below the call to action button is a section of **icons** that show the **foundation** of what I can offer, clicking these icons will
+open up a **modal** from the `modals.html` file that contain more **information** about each area. The **modals** open through the use of 
+**jQuery**, each **icon** is given an **ID** that corresponds to its **modal**, **jQuery** waits for the icon to be **clicked** and runs the **function**
+to **show** the **modal**.
+The **modals** have been styled to appear **opaque**, as a lot of the features on the pages use opaque **backgrounds** that **layer** on top of
+each other I wanted to continue that **theme** here and used a different colour so that the modal still **stood apart** from the rest of
+the page. The text was coloured **white** so that anything that could be seen through the modal didn't draw the eye too much and **distract**
 from the text.
-On smaller devices this section is hidden and replaced with an accordion to make the page more compact so that the user can view
+On **smaller devices** this section is **hidden** and **replaced** with an **accordion** to make the page more **compact** so that the user can view
 each section piece by piece.
-As the About Me and What I Do sections are large areas of text and the user may only want to read them if they want to learn
-more about me they have been placed within collapses, allowing the user to show and hide each seperately.
-An animated chevron has been added to give the user a que to open or close the collapses. This was animated through the use
-of CSS styles and jQuery. jQuery waits for the element to be clicked and toggles a class which provides the animation.  
+As the **About Me** and **What I Do** sections are large areas of text and the user may only want to read them if they want to learn
+more about me they have been placed within **collapses**, allowing the user to **show** and **hide** each seperately.
+An **animated** chevron has been added to give the user a que to **open** or **close** the **collapses**. This was animated through the use
+of **CSS** styles and **jQuery**. jQuery waits for the element to be **clicked** and **toggles** a **class** which provides the animation.  
 
 ### Portfolio
 
-The Portfolio page was originally planned to be made dynamic which is why it is sat in its own app but due to time constraints
+The **Portfolio** page was originally planned to be made **dynamic** which is why it is sat in its own **app** but due to time constraints
 it was not possible to implement this feature and this has been added to the "Possible Features To Implement" section.
-The page displays all of my past projects and allows users to see what I have learned and what I am capable of building.
-Each image shows the home page of each project and links to the deployed website. Included is a link to each github repository
-and information about the projects.
+The page displays all of my past **projects** and allows **users** to see what I have **learned** and what I am capable of **building**.
+Each **image** shows the home page of each **project** and links to the **deployed** website. Included is a **link** to each **github** repository
+and **information** about the **projects**.
 
 ### User Authentication
 
-Visitors to the website can choose to register, this will allow them access to the contact.html page where they can fill out the
-order form and request a website to be built. They will also have access to their user profile where order requests are displayed
-along with invoices and any questions they have asked through the "Contact Me" page.
+Visitors to the website can choose to **register**, this will allow them access to the `contact.html` page where they can fill out the
+**order form** and **request** a website to be built. They will also have access to their **user profile** where order requests are **displayed**
+along with **invoices** and any **questions** they have asked through the **"Contact Me"** page.
 
 ## User Profile
 
-The user profile takes the user's email address and sends a query to the database to return the users information, It then takes
-the user's ID and makes a filter request to the database for any order, invoice and question objects where the client field is
-the same as the user's ID. These are then rendered on to the page through template rendering.
+The **user profile** takes the user's **email** address and sends a **query** to the **database** to return the users **information**, It then takes
+the user's **ID** and makes a **filter** request to the **database** for any **order**, **invoice** and **question** objects where the **client** field is
+the same as the user's **ID**. These are then **rendered** on to the page through **template** rendering.
 
 ## Order Page
 
-The order page uses the ContactForm model form which uses the order model, when the user fills out a valid form this data is saved
-to the database along with some unseen fields, these fields are client, date, price, pay_deposit, deposit_paid, pay_final and final_paid
-client is set with the value of the user who filled out the forms ID, the date uses auto_now_add=True to set the date and time to
-when the form was saved to the database. pay_deposit, deposit_paid, pay_final and final_paid are all Boolean fields set to False
-that are checked to manipulate data displayed on the user's profile as well as the invoices given when a payment is made. Finally
-price is a float field that defaults to 0.0, this field is there to be set when a price is settled, it is used to display the
-cost of the website on the user's profile as well as passed to stripe for payments.
-As the developer I would look at this data on the admin panel, assess how long the build would take and how complex it is 
-(possibly contacting the user for any more information), settle on a price with the user, update the price field and set the 
-pay_deposit field to True. This will then allow the user to pay the deposit through the orders section on their profile page
-which is half of the ammount set as the price.
+The **order page** uses the `ContactForm` model form which uses the `order` model, when the user fills out a **valid** form this **data** is saved
+to the **database** along with some **unseen** fields, these fields are `client`, `date`, `price`, `pay_deposit`, `deposit_paid`, `pay_final` and `final_paid`
+**client** is set with the value of the user's `ID`, the `date` uses `auto_now_add=True` to set the date and time to
+when the form was saved to the **database**. `pay_deposit`, `deposit_paid`, `pay_final` and `final_paid` are all **Boolean** fields set to `False`
+that are checked to **manipulate** data **displayed** on the **user's profile** as well as the **invoices** given when a **payment** is made. Finally
+`price` is a **float field** that **defaults** to 0.0, this field is there to be **set** when a **price** is settled, it is used to display the
+**cost** of the website on the **user's profile** as well as passed to **Stripe** for **payments**.
+As the **developer** I would look at this **data** on the **admin panel**, assess how long the build would take and how **complex** it is 
+(possibly contacting the user for any more information), settle on a price with the user, **update** the `price` field and set the 
+`pay_deposit` field to `True`. This will then allow the user to **pay** the deposit through the **orders** section on their **profile** page
+which is **half** of the ammount **set** as the **price**.
 
 ### Contact Me Page
 
-The contact me page is a simple form that takes the visitors name, email address and a message. This page is not restricted to 
-users who are logged in as I want anyone to be able to ask a qustion or get in touch for any other reason, there is a link to 
-this page in the footer so anyone can get in touch from anywhere on the website. The fields are saved to the database which are 
-viewable through the admin panel for the case of visitors who are not logged in asking questions and also to reply to questions 
-as there is a hidden Answer field. When a user asks a question their ID is also saved in a hidden client field which is allowed 
-to be blank when a none logged in visitor asks a question. The client field is then used to display questions and answers on the
-user's profile page.
+The **contact me** page is a simple **form** that takes the visitors **name**, **email** address and a **message**. This page is not **restricted** to 
+users who are **logged in** as I want **anyone** to be able to ask a **qustion** or get in touch for any other reason, there is a **link** to 
+this page in the **footer** so anyone can get in touch from **anywhere** on the website. The fields are saved to the **database** which are 
+viewable through the **admin panel** for the case of visitors who are **not logged in** asking questions and also to **reply** to questions 
+as there is a hidden **Answer** field. When a user asks a question their **ID** is also saved in a hidden `client` field which is allowed 
+to be **blank** when a none logged in visitor asks a question. The `client` field is then used to **display** questions and answers on the
+user's **profile page**.
 
 ### Stripe Payments
 
-When a user has created an order and an agreement on price has been made the pay_deposit field in the order object will be set 
-to True. This will display the price and a pay deposit button in the "your orders" section of the user's profile. clicking the
-button will take the user through to a summary page which will show them a summary of what they are paying for as well as giving
-them the option to print the page. The print page button uses jQuery, when the button is clicked a window.print() is run as part
-of the click function. Clicking the "Make Payment" button will tke the user to the payment page where they can enter their card 
-details which are passed to the stripe API along with a variable "to_pay" which is set to half of the price value. If the payment
-was taken succesfully the deposit_paid field is set to True, the process is repeated again for pay_final. 
+When a user has created an **order** and an agreement on **price** has been made the `pay_deposit` field in the `order` object will be set 
+to `True`. This will **display** the price and a **pay deposit** button in the **"your orders"** section of the user's **profile**. clicking the
+button will take the user through to a **summary** page which will show them a summary of what they are **paying** for as well as giving
+them the option to **print** the page. The print page button uses **jQuery**, when the button is clicked a `window.print()` is run as part
+of the click **function**. Clicking the **"Make Payment"** button will tke the user to the **payment** page where they can enter their card 
+details which are passed to **Stripe** along with a **variable** `to_pay` which is set to **half** of the `price` value. If the payment
+was taken **succesfully** the `deposit_paid` field is set to `True`, the process is repeated again for `pay_final`. 
 
 ## Invoices
+
+Once a user's **payment** is taken successfully an **invoice** is then created, using the `invoice` model the values are **populated** by 
+drawing **information** from other **objects**, the `business_name`, `start_date` and `client` are taken from the `order` object. The 
+`amount_charged` is taken from the `to_pay` variable and the `card_type`, `last4` and `stripe_receipt` are taken from the `customer` object
+that is returned by **Stripe**. This **information** is then stored in the **database** to be made available through the **user's profile**.
+
+### Footer
+
+The **footer** was styled in the same colours as the **navbar** to frame the webpage. It contains a **link** to the `question.html` page so that
+the page can be reached from **anywhere** on the website. It also incudes a **"signature"** and a link to my **LinkedIn** profile through a 
+**LinkedIn** icon taken from **font awesome**. More social media platforms can be added to this section as they are created.
 
 
 ## Possible Features To Implement
@@ -181,7 +192,6 @@ by Tutor support at ci
 ### Tools
 - [**GitPod**](https://www.gitpod.io/) was used as the development IDE
 - this projects wireframes were created on [**Balsamiq**](https://balsamiq.com/)
-- The CSS code was validated using the [**W3C Markup Validation Service**](https://validator.w3.org/) website
 - The build was tested with [**Travis Continuous Integration**](https://travis-ci.org/)
 ### Databases
 - An SQLite database was used in development
