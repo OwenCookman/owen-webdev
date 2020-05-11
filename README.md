@@ -129,6 +129,51 @@ by Tutor support at ci
 
 To view the testing carried out on this project please click [here](TESTING.md) for my separate testing file
 
+## Bugs
+
+During the development process I ran in to the issues below and listed is how I resolved them:
+
+**Bug 1**
+
+When running the command python3 manage.py runserver the page 
+would return 403 forbidden.
+
+This was due to clearing browsing data to load new styles also 
+clearing any permissions for GitPod.
+
+**Bug 2**
+
+When trying to save the contact form to the database an error 
+stating column "client_id" of relation "comms_order" does not 
+exist.
+
+This was due to renaming a model field called user to client and
+was fixed by deleting the database and its migrations and 
+starting migrations fresh.
+
+**Bug 3**
+
+While deploying the project I recieved an error that the 
+database is not configured correctly.
+
+To fix this problem a file called runtime.txt was created in 
+the root directory, this told Heroku what version of Python to 
+use.
+
+**Bug 4**
+
+When attempting to pay via stripe on the deployed website I would
+recieve a database error.
+
+This was due to the stripe receipt url max length being set to 100
+the SQLite database would allow the url to be stored even though it
+was above 100 characters but the postgreSQL database used in
+deployment would not.
+
+
+
+
+
 
 ## Deployment
 
