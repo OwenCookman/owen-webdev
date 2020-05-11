@@ -166,9 +166,21 @@ message, I will get back to you shortly" at the top of the page
 - Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
 
 ### Replying to a Question(Admin Panel)
+- Open the webpage in a new browser window
+- Select the link in the navbar titled "Login" and see the `login.html` page load
+- Enter a valid username and password for a Super User and see that you are redirected to the `index.html` page and the message 
+"You have succesfully logged in" is showing at the top of the page
+- Add to the end of the URL /admin and press enter, see that the Admin panel has loaded
+- Select the link labelled "questions" under the section titled "COMMS" and see that a list of links labelled with different 
+Names is displayed
+- Select the Name who's question you would like to reply to and see the details of the question displayed
+- Type your answer in to the box labelled Answer
+- Select the button labelled "Save" and see the page of Names load with the message "The question “X” was changed successfully." 
+where X is the name
 
 
 ### Editing a Question
+
 
 ### Deleting a Question
 
