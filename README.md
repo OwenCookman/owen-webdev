@@ -314,6 +314,9 @@ Visit the website at http://127.0.0.1:5000
     5. Please note that if you are using a Windows operating system the `Procfile` may not format 
     properly, please create another file named `Procfile` and copy the contents of the terminal 
     generated `Procfile` over to it, then delete the generated `Procfile`.
+    As this project uses Gunicorn the Procfile I used appears like this:
+
+    `web: gunicorn webdev.wsgi:application`
 
 6. `git add` and `git commit` both `requirements.txt` and `Procfile` then `git push` your staged files to GitHub.
 
