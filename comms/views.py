@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage
 from django.contrib import messages
 from .models import question
-from . forms import QuestionForm, ContactForm
+from . forms import QuestionForm, UserQuestionForm, ContactForm
 import os
 
 # Create your views here.
@@ -13,12 +13,12 @@ MY_EMAIL = os.environ.get('MY_EMAIL')
 
 def create_question(request):
     """ Returns the question.html page and allows the creation of new questions """
-    if request.method == "POST":
-        question_form = QuestionForm(request.POST)
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            question_form = UserQuestionForm(request.POST)
 
-        if question_form.is_valid():
-            question = question_form.save(commit=False)
-            if request.user.is_authenticated:
+            if question_form.is_valid():
+                question = question_form.save(commit=False)
                 question.client = request.user
                 question.name = request.user.username
                 question.email = request.user.email
@@ -28,18 +28,29 @@ def create_question(request):
                 return redirect('profile')
 
             else:
+                messages.warning(
+                    request, "Sorry your message could not be posted, please try again")
+        else:
+            question_form = UserQuestionForm()
+
+    else:
+        if request.method == "POST":
+            question_form = QuestionForm(request.POST)
+
+            if question_form.is_valid():
+                question = question_form.save(commit=False)
                 question.client = None
                 question.save()
                 messages.success(
                     request, "Thank you for your message, I will get back to you shortly")
                 return redirect('index')
 
-        else:
-            messages.warning(
-                request, "Sorry your message could not be posted, please try again")
+            else:
+                messages.warning(
+                    request, "Sorry your message could not be posted, please try again")
 
-    else:
-        question_form = QuestionForm()
+        else:
+            question_form = QuestionForm()
     return render(request, 'question.html', {"question_form": question_form})
 
 
