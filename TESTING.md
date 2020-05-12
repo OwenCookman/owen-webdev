@@ -5,7 +5,8 @@ The website was tested by [**Travis Continuous Integration**](https://travis-ci.
 
 ## Manual Testing
 
-Manual testing was carried out on a Desktop computer
+Manual testing was carried out on a Desktop computer including responsive testing. 
+responsiveness was also tested on a Razer Phone.
 
 ### Navbar
 - Open the webpage in a new browser window
@@ -44,6 +45,7 @@ the headings of the icons at 575px
 your way down the titles seeing that when one opens the open one closes
 - Select the open title to see that all information is closed
 
+
 ### Portfolio Page
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Portfolio" and see the `portfolio.html` page load
@@ -55,6 +57,7 @@ your way down the titles seeing that when one opens the open one closes
 - Set the device to responsive
 - Move the slider in and out to see that the images, title, link and text change to be stacked on top of each other at 991px
 
+
 ### User Registration
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Register" and see the `register.html` page load
@@ -64,12 +67,14 @@ your way down the titles seeing that when one opens the open one closes
 - Enter a valid email, username and matching passwords and see that you are redirected to the `index.html` page and 
 the message "You have successfully registered" is showing at the top of the page
 
+
 ### User Login
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
 - Enter an invalid username or password and see the message "Your username or Password is incorrect"
 - Enter a valid username and password and see that you are redirected to the `index.html` page and the message "You have 
 successfully logged in" is showing at the top of the page
+
 
 ### User Logout
 - Open the webpage in a new browser window
@@ -78,6 +83,7 @@ successfully logged in" is showing at the top of the page
 successfully logged in" is showing at the top of the page
 - Select the link in the navbar titled "Logout" and see that you are logged out and the message "You have been logged out 
 successfully" is showing at the top of the page
+
 
 ### Creating an Order 
 - Open the webpage in a new browser window
@@ -91,6 +97,7 @@ first required field
 "Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build" at the top 
 of the page 
 
+
 ### Editing an Order(Admin Panel)
 - After following the steps for Creating an Order
 - Open the webpage in a new browser window
@@ -103,6 +110,7 @@ of the page
 - Select the order link and see that the details of the order are loaded on to the page
 - Set a value to the "price" field and check the box for "Pay deposit"
 - Click save and see the order page load with the message "The order X was changed successfully" where X is the name of the order
+
 
 ### Paying a Deposit/Final Payment
 - After following the steps for Editing an Order
@@ -129,6 +137,7 @@ if using this year in Expiry Year and Expiry Year: this year if the Expiry month
 - See that the `profile.html` page loads with the message "Payment taken successfully" is shown at the top
 - Open the "Your Orders" section and see that under "status" it says "Deposit paid, awaiting completion" if you paid the deposit
 or "Final payment made" if you paid the final payment
+
 
 ### Viewing an Invoice
 - After following the steps for Editing an Order
@@ -165,6 +174,7 @@ successfully logged in" is showing at the top of the page
 message, I will get back to you shortly" at the top of the page
 - Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked
 
+
 ### Replying to a Question(Admin Panel)
 - Open the webpage in a new browser window
 - Select the link in the navbar titled "Login" and see the `login.html` page load
@@ -177,6 +187,7 @@ Names is displayed
 - Type your answer in to the box labelled Answer
 - Select the button labelled "Save" and see the page of Names load with the message "The question “X” was changed successfully." 
 where X is the name
+
 
 ### Editing a Question
 - Open the webpage in a new browser window
@@ -192,6 +203,7 @@ details of the question
 of the page
 - Click on the section titled "Your Questions" and see the collapse open to reveal the question you had asked shown with the 
 changes that you made
+
 
 ### Deleting a Question
 - Open the webpage in a new browser window

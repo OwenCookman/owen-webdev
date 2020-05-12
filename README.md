@@ -2,10 +2,14 @@
 ======
 [![Build Status](https://travis-ci.com/OwenCookman/owen-webdev.svg?branch=master)](https://travis-ci.com/OwenCookman/owen-webdev)
 
+
+
 The webpage was created to advertise myself as a web developer, showcasing my portfolio of previous projects 
 which should be regularly updated as more projects are finished, giving those who visit the website an introduction to 
 myself, the work I have done, a way to contact me for consultations and also a way to hire and pay me as a freelance 
 developer.
+
+
 
 ## UX
 
@@ -51,20 +55,21 @@ As the Developer I expect:
 I wanted to aim for a **neutral** colour palette with this website as my clients could be looking to build websites with 
 a whole range of **themes**. This led me to look at neutral colour **groups**. I settled on a dark navy blue for the **nav** and 
 **footer** elements, this would **seperate** them from other sections of the page.
- I decided to keep the page **background** as **white**while content would appear on an **opaque field**. This allowed content 
+ I decided to keep the page background **white** while content would appear on an **opaque field**. This allowed content 
  to be **stacked** within itself making the field around the inner content **darker** which would seperate **generated** content 
  even though they are generated in the same container for example when a user asks multiple questions.
 
 #### Fonts
-I decided to go with the [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) font as it still looked **professional** and neat but also **different** from what is seen
+I decided to go with the [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) font as it still looked **professional** and neat but also different from what is seen
 on a lot of other web pages, I noticed that this **paired** well with the [**Roboto**](https://fonts.google.com/specimen/Roboto) font so I decided that any **titles** or **headers**
 would be styled with [**Inria Sans**](https://fonts.google.com/specimen/Inria+Sans) and any other blocks of text would use [**Roboto**](https://fonts.google.com/specimen/Roboto). This further breaks content up and keeps 
-the page looking **interesting**.
+the page looking interesting.
 
 #### Favicon
 The favicon was taken from [**PNG Fuel**](https://www.pngfuel.com/free-png/fdyur) I was looking for a **simple** icon that
 would explain exactly what the website **involves**, the **laptop** with the </> symbol for **code** was perfect in showing that I 
 am a **developer**. 
+
 
 ### Wireframes 
 
@@ -74,16 +79,16 @@ Please click [here](wireframes) to view my first draft Wireframes, these were or
 The **'About Me'** page and **'What I do'** page were later combined on to the **index** page as this would be the landing point where
 this information could be displayed to **sell** myself as a **developer** rather than having two small separate pages.
 
+
+
 ## Features
 
 ### Theme
-
 The original **Theme** was taken from the **Bootswatch** themes library, the theme **Sandstone** was used and then styled with **CSS** to 
 **customize** it further such as the **fonts** used and the changes made to the **navbar**, The **buttons** provided were kept the same
 as the colours worked well with my **palette** but the **font** used in the **button** was **changed** to match the other text on the page.
 
 ### Index Page/Introduction
-
 The **Index** page serves as the main **selling** page of the website, it includes a Large **call to action** button so a **user** can get 
 straight to the steps needed to **hire me** as a **developer**. The button will **link** them directly to the `contact.html` page which is
 a **login required** page. If the user is not logged in or registered they will be **redirected** to the `login.html` page which also 
@@ -109,7 +114,6 @@ An **animated** chevron has been added to give the user a que to **open** or **c
 of **CSS** styles and **jQuery**. jQuery waits for the element to be **clicked** and **toggles** a **class** which provides the animation.  
 
 ### Portfolio
-
 The **Portfolio** page was originally planned to be made **dynamic** which is why it is sat in its own **app** but due to time constraints
 it was not possible to implement this feature and this has been added to the "Possible Features To Implement" section.
 The page displays all of my past **projects** and allows **users** to see what I have **learned** and what I am capable of **building**.
@@ -117,19 +121,16 @@ Each **image** shows the home page of each **project** and links to the **deploy
 and **information** about the **projects**.
 
 ### User Authentication
-
 Visitors to the website can choose to **register**, this will allow them access to the `contact.html` page where they can fill out the
 **order form** and **request** a website to be built. They will also have access to their **user profile** where order requests are **displayed**
 along with **invoices** and any **questions** they have asked through the **"Contact Me"** page.
 
 ## User Profile
-
 The **user profile** takes the user's **email** address and sends a **query** to the **database** to return the users **information**, It then takes
 the user's **ID** and makes a **filter** request to the **database** for any **order**, **invoice** and **question** objects where the **client** field is
 the same as the user's **ID**. These are then **rendered** on to the page through **template** rendering.
 
 ## Order Page
-
 The **order page** uses the `ContactForm` model form which uses the `order` model, when the user fills out a **valid** form this **data** is saved
 to the **database** along with some **unseen** fields, these fields are `client`, `date`, `price`, `pay_deposit`, `deposit_paid`, `pay_final` and `final_paid`
 **client** is set with the value of the user's `ID`, the `date` uses `auto_now_add=True` to set the date and time to
@@ -146,7 +147,6 @@ As the **developer** I would look at this **data** on the **admin panel**, asses
 which is **half** of the amount **set** as the **price**.
 
 ### Contact Me Page
-
 The **contact me** page is a simple **form** that takes the visitors **name**, **email** address and a **message**. This page is not **restricted** to 
 users who are **logged in** as I want **anyone** to be able to ask a **qustion** or get in touch for any other reason, there is a **link** to 
 this page in the **footer** so anyone can get in touch from **anywhere** on the website. The fields are saved to the **database** which are 
@@ -156,7 +156,6 @@ to be **blank** when a none logged in visitor asks a question. The `client` fiel
 user's **profile page**, these questions can then be **edited** or **deleted** by the user.
 
 ### Stripe Payments
-
 When a user has created an **order** and an agreement on **price** has been made the `pay_deposit` field in the `order` object will be set 
 to `True`. This will **display** the price and a **pay deposit** button in the **"your orders"** section of the user's **profile**. clicking the
 button will take the user through to a **summary** page which will show them a summary of what they are **paying** for as well as giving
@@ -166,14 +165,12 @@ details which are passed to **Stripe** along with a **variable** `to_pay` which 
 was taken **successfully** the `deposit_paid` field is set to `True`, the process is repeated again for `pay_final`. 
 
 ## Invoices
-
 Once a user's **payment** is taken successfully an **invoice** is then created, using the `invoice` model the values are **populated** by 
 drawing **information** from other **objects**, the `business_name`, `start_date` and `client` are taken from the `order` object. The 
 `amount_charged` is taken from the `to_pay` variable and the `card_type`, `last4` and `stripe_receipt` are taken from the `customer` object
 that is returned by **Stripe**. This **information** is then stored in the **database** to be made available through the **user's profile**.
 
 ### Footer
-
 The **footer** was styled in the same colours as the **navbar** to frame the webpage. It contains a **link** to the `question.html` page so that
 the page can be reached from **anywhere** on the website. It also incudes a **"signature"** and a link to my **LinkedIn** profile through a 
 **LinkedIn** icon taken from **font awesome**. More social media platforms can be added to this section as they are created.
@@ -186,10 +183,13 @@ by Tutor support at CI
 - The content on the portfolio page to be rendered from the database, with new entries uploaded from the admin panel
 - Email notifications when visitors/users ask a question and invoices/confirmations sent to users email
 
+
+
 ## Technologies Used
 
 ### Languages
 - This project uses **HTML**, **CSS**, **JavaScript** and **Python** programming languages
+
 ### Frameworks & Libraries
 -[**Django 3.0.4**](https://www.djangoproject.com/)
 - [**Stripe**](https://stripe.com/gb)
@@ -197,10 +197,12 @@ by Tutor support at CI
 - [**FontAwesome**](https://fontawesome.com/)
 - [**Google Fonts**](https://fonts.google.com/)
 - [**Popper.js**](https://popper.js.org/)
+
 ### Tools
 - [**GitPod**](https://www.gitpod.io/) was used as the development IDE
 - this projects wireframes were created on [**Balsamiq**](https://balsamiq.com/)
 - The build was tested with [**Travis Continuous Integration**](https://travis-ci.org/)
+
 ### Databases
 - An SQLite database was used in development
 - A PostgreSQL database is used in deployment
@@ -210,12 +212,12 @@ by Tutor support at CI
 
 To view the testing carried out on this project please click [here](TESTING.md) for my separate testing file
 
+
 ## Bugs
 
-During the development process I ran in to the issues below and listed is how I resolved them:
+During the development process I ran in to a few issues, these are listed below along with how they were overcome:
 
 **Bug 1**
-
 When running the command python3 manage.py runserver the page 
 would return 403 forbidden.
 
@@ -223,7 +225,6 @@ This was due to clearing browsing data to load new styles also
 clearing any permissions for GitPod.
 
 **Bug 2**
-
 When trying to save the contact form to the database an error 
 stating column "client_id" of relation "comms_order" does not 
 exist.
@@ -233,7 +234,6 @@ was fixed by deleting the database and its migrations and
 starting migrations fresh.
 
 **Bug 3**
-
 While deploying the project I received an error that the 
 database is not configured correctly.
 
@@ -242,7 +242,6 @@ the root directory, this told Heroku what version of Python to
 use.
 
 **Bug 4**
-
 When attempting to pay via stripe on the deployed website I would
 recieve a database error.
 
@@ -252,13 +251,13 @@ was above 100 characters but the postgreSQL database used in
 deployment would not.
 
 
+
 ## Deployment
 
 The GitPod IDE was used to develop this project and all work was added, committed and 
 pushed to a GitHub repository which was linked with Heroku.
 
 ### How to run the project locally
-
 **Note:** some of the commands below may differ depending on your chosen IDE and Operating system, 
 the commands below will work with python 3 installed on a Windows operating system. Some IDEs will
 require "`pip3`" instead of "`pip`" or "`python3`" instead of "`python`" for example.
@@ -286,7 +285,7 @@ or Download" button at the top of the page and select "Download Zip" to extract 
 `pip -r requirements.txt`
 
 7. inside the root directory create a file named env.py, at the top of the document type `import os` 
-and add the environment variables shown in the heroku deployment with the following syntax:
+and add the environment variables shown in the heroku deployment using the following syntax:
 
 `os.environ.setdefault("SECRET_KEY", "add your secret key here")`
 
@@ -295,6 +294,7 @@ Run the application with the below command
 python manage.py runserver
 
 Visit the website at http://127.0.0.1:5000
+
 
 
 ### How to deploy the project to Heroku
@@ -345,10 +345,11 @@ click "Deploy Branch".
 
 13. Select the button "Open App" in the top right corner and wait for the home page to load.
 
-## Acknowledgements
 
+
+## Acknowledgements
 - My family and friends for testing this project and reporting back to me with any issues.
 
 - My mentor [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/) for his brilliant tutelage
 
-- [Joke Heyndels](https://github.com/Wings30306) for her guidance in squashing bugs 
+- [Joke Heyndels](https://github.com/Wings30306) for her guidance in squashing particularly tricky bugs 
