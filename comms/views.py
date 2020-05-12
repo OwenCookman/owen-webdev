@@ -64,10 +64,10 @@ def edit_question(request, slug):
     """ Returns the question.html page with the form details filled in ready to be editied """
 
     form_data = question.objects.get(id=slug)
-    question_form = QuestionForm(instance=form_data)
+    question_form = UserQuestionForm(instance=form_data)
 
     if request.method == "POST":
-        question_form = QuestionForm(request.POST, instance=form_data)
+        question_form = UserQuestionForm(request.POST, instance=form_data)
 
         if question_form.is_valid():
             question_form.save()
@@ -77,7 +77,7 @@ def edit_question(request, slug):
             return redirect('profile')
 
         else:
-            question_form = QuestionForm(instance=form_data)
+            question_form = UserQuestionForm(instance=form_data)
 
     return render(request, 'question.html', {"question_form": question_form})
 
