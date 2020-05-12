@@ -20,6 +20,8 @@ def create_question(request):
             question = question_form.save(commit=False)
             if request.user.is_authenticated:
                 question.client = request.user
+                question.name = request.user.username
+                question.email = request.user.email
                 question.save()
                 messages.success(
                     request, "Thank you for your message, I will get back to you shortly")
