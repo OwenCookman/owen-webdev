@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 
 class order(models.Model):
+    """ Model used to store user orders """
+
     WEBSITE_CHOICES = (
         ('Landing page/ Brochure website', 'Landing page/ Brochure website'),
         ('Multipaged information website',
@@ -12,6 +14,7 @@ class order(models.Model):
         ('Ecommerce/ Webstore', 'Ecommerce/ Webstore'),
         ('Something else', 'Something else')
     )
+
     business_name = models.CharField(
         "What is the name of your business?*", max_length=50)
     website = models.CharField(
@@ -39,6 +42,8 @@ class order(models.Model):
 
 
 class question(models.Model):
+    """ Model used to store questions from registered and unregistered users """
+    
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     question = models.CharField(max_length=3000)

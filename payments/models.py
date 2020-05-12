@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 
 class invoice(models.Model):
+    """ Model used to store invoice data """
+
     client = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, default=1)
     business_name = models.CharField(max_length=50)
     start_date = models.DateField()
