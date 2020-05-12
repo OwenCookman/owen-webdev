@@ -101,7 +101,7 @@ def delete_question(request, slug):
 @login_required
 def contact(request):
     """ Returns the contact.html page where users can create new orders """
-    
+
     if request.method == "POST":
         contact_form = ContactForm(request.POST)
 
@@ -111,7 +111,7 @@ def contact(request):
             contact.save()
 
             messages.success(
-                request, "Thank you, I will assess your order and be in touch via email with the cost and time it will take for your build")
+                request, "Thank you, I will assess your order and be in touch via email as soon as possible. If you have any questions please contact me through the Contact Me page.")
 
             return redirect('profile')
 
