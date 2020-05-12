@@ -80,6 +80,22 @@ The **'About Me'** page and **'What I do'** page were later combined on to the *
 this information could be displayed to **sell** myself as a **developer** rather than having two small separate pages.
 
 
+## User/Admin interaction
+As there is no set price or time frame for a website to be built these could vary from website to website the superuser must 
+interact with data submitted by a user so that the user can perform certain actions for example:
+
+1. A user creates an order through the "Order" page
+2. The Developer(Superuser) looks at the data submitted through the Admin panel, assesses how long and complex the build is and 
+contacts the user via email with a price
+3. A price is agreed upon so the Developer returns to the Admin panel and updates the orders "Price" field with the agreed price 
+and checks the "Pay deposit" field
+4. The user can then go to their profile page and look at the status of their order where a button to pay the deposit will be, 
+clicking the button will take them through the steps of paying and once paid the Deposit paid field is automaticallly checked
+5. When the developer has completed their work and the user is happy with the finished product. The developer can return to the 
+Admin panel and check the "Pay final" field
+6. The user can then return to their profile and make their final payment, this will automatically check the "Final paid" field
+
+
 
 ## Features
 
