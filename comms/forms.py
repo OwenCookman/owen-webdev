@@ -33,6 +33,7 @@ class QuestionForm(forms.ModelForm):
             'question': forms.Textarea(),
         }
 
+
 class UserQuestionForm(forms.ModelForm):
     """ Form used by registered users to create new questions """
     class Meta:
